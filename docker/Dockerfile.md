@@ -12,6 +12,7 @@ FROM php:8.2-alpine
 ```
 ### 🧩 Step 2: Copy Project Local Computer to Docker Image
 ```bash
+# Set working directory
 WORKDIR /var/www/html
 
 # COPY <source> <destination>
