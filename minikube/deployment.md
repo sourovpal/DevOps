@@ -1,4 +1,4 @@
-# **Write Deployment file**
+# **Deployment File Configration**
 
 ### 🧩 Step 1: Basic Configration
 
