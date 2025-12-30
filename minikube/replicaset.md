@@ -64,5 +64,5 @@ spec:
 
 ```bash
   👉 kubectl get pods                                                    # Show all Pods
-  👉 kubectl get pods                                                    # Show all Pods
+  👉 kubectl get replicasets                                             # Show all Replicasets
 ```
