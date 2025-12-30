@@ -38,3 +38,16 @@ pod.yaml
         cpu: "500m"
         memory: "512Mi"
 ```
+
+### 🧩 Delete Pod
+
+```bash
+  👉 kubectl delete pod/html-website-deployment-xxxxxxxxx                # Delete Pod
+```
+
+### 🧩 Others Commands
+
+```bash
+  👉 kubectl get pods                                                    # Show all Pods
+  👉 kubectl describe pod/html-website-deployment-xxxxxxxxx              # Show existing pod configration details
+```
