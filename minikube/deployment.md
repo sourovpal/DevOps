@@ -1,4 +1,4 @@
-# **Deployment File Configration**
+# **Deployment File Configration (Manage Pods and Replicaset)**
 
 deployment.yaml
 
