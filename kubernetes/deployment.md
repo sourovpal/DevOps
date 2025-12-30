@@ -72,6 +72,7 @@ spec:
   👉 kubectl describe deployment/html-website-deployment                 # Show existing deployment configration details
   👉 kubectl describe pod/html-website-deployment-xxxxxxxxx              # Show existing pod configration details
 
+  👉 kubectl rollout history deployment/xxxx-xxxxxxx-xxxxx               # History existing deployment pod
   👉 kubectl rollout restart deployment/xxxx-xxxxxxx-xxxxx               # Restart existing pods
   👉 kubectl rollout status deployment/xxxx-xxxxxxx-xxxxx                # Check Current Status
   👉 kubectl rollout undo deployment/xxxx-xxxxxxx-xxxxx                  # Check Current Status
