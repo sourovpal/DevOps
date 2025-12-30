@@ -39,6 +39,18 @@ spec:
 📌 IfNotPresent - আগে local image আছে কিনা চেক করবে | থাকলে 👉 local ব্যবহার করবে | না থাকলে 👉 registry থেকে pull করবে\
 📌 Never - শুধু local Docker image ব্যবহার করবে
 
+### 🧩 Step 4: Manage Pod Resources
+
+```bash
+  resources:
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+```
+
 ### 🧩 Delete Deployment or Pod
 
 ```bash
