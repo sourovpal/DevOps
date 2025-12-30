@@ -46,3 +46,9 @@ composer install \
   --no-interaction
 
 ```
+
+### 🧩 Step 4: Build Image
+```bash
+👉 docker build -t <image-name> .
+👉 docker build -t <image-name>:<tag-name> .
+```
