@@ -28,4 +28,9 @@
   docker restart jenkins
 ```
 
+### 🧩 Open Jenkins Container Terminal
+```bash
+docker exec -it jenkins bash             # bash or sh
+```
+
 ### 🧩 Github Webhook trigger
