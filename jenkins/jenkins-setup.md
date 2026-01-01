@@ -102,6 +102,8 @@ USER jenkins
 ### 🧩 Step 1: Build & Run Custom Jenkins Image
 
 ```bash
+docker build -t jenkins-ssh .
+
 docker run -d \
   --name jenkins \
   -p 8080:8080 \
