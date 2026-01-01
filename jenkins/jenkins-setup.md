@@ -70,34 +70,46 @@ docker exec -it jenkins bash             # bash or sh
 
 # Build Custom Jenkins Image with SSH For Production
 
-### 🧩 Step 1: Build Jenkins Image Dockerfile
+### 🧩 Step 1: Write Custom Jenkins Image Dockerfile
 Dockerfile
 
 ```bash 
   FROM jenkins/jenkins:lts
-  
-  USER root
-  
-  RUN apt-get update && \
-      apt-get install -y openssh-client && \
-      rm -rf /var/lib/apt/lists/*
-  
-  RUN mkdir -p /var/jenkins_home/.ssh && \
-      chmod 700 /var/jenkins_home/.ssh
-  
-  COPY id_rsa /var/jenkins_home/.ssh/id_rsa
 
-  RUN chmod 600 /var/jenkins_home/.ssh/id_rsa
+USER root
 
-  RUN apt-get update && apt-get install -y && \
-    git && \
-    docker.io && \
-    curl
-  
-  RUN chown -R jenkins:jenkins /var/jenkins_home/.ssh
-  
-  USER jenkins
+# Install required tools
+RUN apt-get update && apt-get install -y \
+    git \
+    docker.io \
+    openssh-client \
+    curl && \
+    rm -rf /var/lib/apt/lists/*
+
+# Setup SSH for Jenkins
+RUN mkdir -p /var/jenkins_home/.ssh && \
+    chmod 700 /var/jenkins_home/.ssh
+
+# Copy private key
+COPY id_rsa /var/jenkins_home/.ssh/id_rsa
+
+RUN chmod 600 /var/jenkins_home/.ssh/id_rsa && \
+    chown -R jenkins:jenkins /var/jenkins_home/.ssh
+
+USER jenkins
+
 ```
+### 🧩 Step 1: Build & Run Custom Jenkins Image
 
+```bash
+docker run -d \
+  --name jenkins \
+  -p 8080:8080 \
+  -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  jenkins-ssh
+
+```
 
 
