@@ -65,18 +65,19 @@ pipeline {
                 echo 'Deployment restarted successfully'
             }
         }
+    }
 
-        post {
-            success {
-                echo 'Build successfully ✅'
-            }
-            failure {
-                echo 'Build failed ❌'
-            }
+     post {
+        success {
+            echo 'Build successfully ✅'
+        }
+        failure {
+            echo 'Build failed ❌'
         }
     }
 }
 ```
+
 
 
 
