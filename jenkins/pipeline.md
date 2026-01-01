@@ -78,6 +78,67 @@ pipeline {
 }
 ```
 
+### 🧩 Add Parameters
+
+```bash
+ parameters {
+        // 1. String parameter
+        string(
+            name: 'APP_NAME',
+            defaultValue: 'my-app',
+            description: 'Enter application name'
+        )
+
+        // 2. Boolean parameter
+        booleanParam(
+            name: 'DEPLOY',
+            defaultValue: true,
+            description: 'Deploy after build?'
+        )
+
+        // 3. Choice (single selection)
+        choice(
+            name: 'GIT_BRANCH',
+            choices: ['main', 'dev', 'staging', 'feature'],
+            description: 'Select Git branch to build'
+        )
+
+        // 4. Multi-line Text
+        text(
+            name: 'ENV_VARS',
+            defaultValue: 'KEY1=VALUE1\nKEY2=VALUE2',
+            description: 'Environment variables (multi-line)'
+        )
+
+        // 5. Password (hidden)
+        password(
+            name: 'SECRET_KEY',
+            defaultValue: '',
+            description: 'Enter secret key'
+        )
+
+        // 6. Number parameter
+        string(
+            name: 'REPLICAS',
+            defaultValue: '3',
+            description: 'Number of replicas (integer)'
+        )
+
+        // 7. Multi-choice (via extended choice plugin, optional)
+        // Requires: Extended Choice Parameter Plugin
+        // Uncomment if plugin installed
+        /*
+        extendedChoice(
+            name: 'SERVICES',
+            type: 'PT_MULTI_SELECT',
+            description: 'Select services to deploy',
+            multiSelectDelimiter: ',',
+            value: 'auth,api,frontend,worker'
+        )
+        */
+    }
+```
+
 
 
 
