@@ -152,6 +152,23 @@ pipeline {
 
 ```
 
+### 🧩 Use SSH Agent Plugin for SSH Access
+
+```bash
+// Plugin: SSH Agent
+// SSH Register: http://localhost:8080/manage/credentials/store/system/
+
+stage('Test SSH') {
+    steps {
+        sshagent(['testkey']) {
+            sh ''' ssh -o StrictHostKeyChecking=no sourov@172.17.186.110 "echo Hello from remote" '''
+        }
+    }
+}
+```
+
+
+
 
 
 
