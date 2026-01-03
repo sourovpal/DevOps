@@ -30,6 +30,8 @@
 
 ### 🧩 Install Nginx
 
+nginx.yml
+
 ```bash
   - name: Install and start Nginx
     hosts: web
