@@ -47,8 +47,14 @@ composer install \
 
 ```
 
-### 🧩 Step 4: Build Image
+### 🧩 Step 5: Build Image
 ```bash
 👉 docker build -t <image-name> .
 👉 docker build -t <image-name>:<tag-name> .
+```
+
+### 🧩 Step 5: Run In Container
+```bash
+👉 docker run -d --name -p 8080:80 <container-name> <image-name>
+👉 docker run -d --name <container-name> -p 8080:80 -v html-website:/var/www/html <image-name>
 ```
