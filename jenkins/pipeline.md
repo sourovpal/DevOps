@@ -280,6 +280,161 @@ pipeline {
     }
 ```
 
+
+### 🧩 If–Else Condition
+
+```bash
+    pipeline {
+        agent any
+    
+        environment {
+            ENV = "prod"
+        }
+    
+        stages {
+            stage('If Else') {
+                steps {
+                    script {
+                        if (env.ENV == 'prod') {
+                            echo "Production deployment"
+                        } else {
+                            echo "Non-production deployment"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # Condition based on parameter
+
+    pipeline {
+        agent any
+    
+        parameters {
+            choice(name: 'ENV', choices: ['dev', 'staging', 'prod'])
+        }
+    
+        stages {
+            stage('Env Check') {
+                steps {
+                    script {
+                        if (params.ENV == 'prod') {
+                            echo "Deploying to PROD"
+                        } else {
+                            echo "Deploying to ${params.ENV}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+```
+
+### 🧩 Function in Jenkins Pipeline
+
+```bash
+    def deployApp(server, env) {
+        if (env == 'prod') {
+            echo "Deploying to PROD server: ${server}"
+        } else {
+            echo "Deploying to ${env} server: ${server}"
+        }
+    }
+
+    # Pipeline
+
+    pipeline {
+        agent any
+    
+        stages {
+            stage('Deploy') {
+                steps {
+                    script {
+                        deployApp("172.17.186.110", "prod")
+                    }
+                }
+            }
+        }
+    }
+```
+
+### 🧩 Pipeline Loop
+
+```bash
+    pipeline {
+        agent any
+    
+        stages {
+            stage('For Loop') {
+                steps {
+                    script {
+                        for (int i = 1; i <= 3; i++) {
+                            echo "Running step ${i}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    # Loop over list
+
+    pipeline {
+        agent any
+    
+        stages {
+            stage('Loop List') {
+                steps {
+                    script {
+                        def servers = ['server1', 'server2', 'server3']
+    
+                        servers.each { server ->
+                            echo "Deploying to ${server}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+```
+
+### 🧩 Loop + Function + If
+
+```bash
+def deploy(server) {
+    if (params.ENV == 'prod') {
+        sh "ssh user@${server} 'deploy-prod.sh'"
+    } else {
+        sh "ssh user@${server} 'deploy-dev.sh'"
+    }
+}
+
+pipeline {
+    agent any
+
+    parameters {
+        choice(name: 'ENV', choices: ['dev', 'prod'])
+    }
+
+    stages {
+        stage('Deploy Loop') {
+            steps {
+                script {
+                    def servers = ['172.17.186.110', '172.17.186.111']
+
+                    for (server in servers) {
+                        deploy(server)
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
 ### 🧩 Use SSH Agent Plugin for SSH Access
 
 ```bash
@@ -294,6 +449,7 @@ stage('Test SSH') {
     }
 }
 ```
+
 
 
 
