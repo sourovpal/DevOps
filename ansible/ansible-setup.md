@@ -19,6 +19,14 @@ inventory.ini
   
   [db]
   192.168.1.20
+
+  # ------------------------------ OR -------------------------------
+
+  [web]
+  192.168.1.10 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/web.pem
+  
+  [db]
+  192.168.1.20 ansible_user=root ansible_ssh_private_key_file=~/.ssh/db.pem
   
   [all:vars]
   ansible_user=ubuntu
