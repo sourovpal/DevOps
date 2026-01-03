@@ -58,3 +58,38 @@ composer install \
 👉 docker run -d --name -p 8080:80 <container-name> <image-name>
 👉 docker run -d --name <container-name> -p 8080:80 -v html-website:/var/www/html <image-name>
 ```
+
+### 🧩 Step 5: All Commands
+```bash
+👉 docker images                           # all image list
+👉 docker image list                       # all image list
+👉 docker ps                               # all runing container list
+👉 docker ps -a                            # all runing and stoped container list
+👉 docker start <container-name or id>     # start container
+👉 docker stop <container-name or id>      # stop container
+👉 docker rm <container-name or id>        # delete container
+👉 docker rmi <image-name or id>           # delete image 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
