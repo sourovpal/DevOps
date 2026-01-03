@@ -433,6 +433,19 @@ pipeline {
         }
     }
 }
+
+# Multiple value List 
+
+def servers = [
+    [user: 'sourov', ip: '172.17.186.110'],
+    [user: 'root',   ip: '172.17.186.111']
+]
+
+servers.each { server ->
+    echo "User: ${server.user}, IP: ${server.ip}"
+}
+
+
 ```
 
 ### 🧩 Use SSH Agent Plugin for SSH Access
@@ -449,6 +462,7 @@ stage('Test SSH') {
     }
 }
 ```
+
 
 
 
