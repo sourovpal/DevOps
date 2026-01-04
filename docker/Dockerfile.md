@@ -56,6 +56,8 @@ composer install \
 ### 🧩 Step 5: Run In Container
 ```bash
 👉 docker run nginx                          # container run
+👉 docker run -d --memory="512m" --cpus="1.0" <container-name>
+👉 docker run -d --net app-net --name <container-name>
 👉 docker run -d --name -p 8080:80 <container-name> <image-name>
 👉 docker run -d --name <container-name> -p 8080:80 -v html-website:/var/www/html <image-name>
 ```
