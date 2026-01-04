@@ -74,7 +74,7 @@ docker exec -it jenkins bash             # bash or sh
 Dockerfile
 
 ```bash 
-  FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:lts
 
 USER root
 
