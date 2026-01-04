@@ -69,7 +69,10 @@ composer install \
 👉 docker stop <container-name or id>               # stop container
 👉 docker rm <container-name or id>                 # delete container
 👉 docker rmi <image-name or id>                    # delete image
-👉 docker exec -it <container-name> bash/sh         # delete image
+👉 docker exec -it <container-name> bash/sh         # run command in container
+👉 docker inspect <image-name>                      # Image Details
+👉 docker history <image-name>                      # Show Layer
+
 ```
 
 
