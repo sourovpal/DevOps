@@ -55,6 +55,7 @@ composer install \
 
 ### 🧩 Step 5: Run In Container
 ```bash
+👉 docker run nginx                          # container run
 👉 docker run -d --name -p 8080:80 <container-name> <image-name>
 👉 docker run -d --name <container-name> -p 8080:80 -v html-website:/var/www/html <image-name>
 ```
@@ -73,6 +74,13 @@ composer install \
 👉 docker inspect <image-name>                      # Image Details
 👉 docker history <image-name>                      # Show Layer
 👉 docker inspect <container-name-or-id>            # Container Details
+👉 docker logs <container-name-or-id>               # Container Logs
+👉 docker logs -f <container-name-or-id>            # Container Live Logs
+
+# Docker Hub
+
+👉 docker pull nginx                                # image download
+
 ```
 
 
