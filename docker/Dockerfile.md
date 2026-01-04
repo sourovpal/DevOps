@@ -65,14 +65,14 @@ composer install \
 👉 docker image list                                # all image list
 👉 docker ps                                        # all runing container list
 👉 docker ps -a                                     # all runing and stoped container list
-👉 docker start <container-name or id>              # start container
-👉 docker stop <container-name or id>               # stop container
-👉 docker rm <container-name or id>                 # delete container
-👉 docker rmi <image-name or id>                    # delete image
+👉 docker start <container-name-or-id>              # start container
+👉 docker stop <container-name-or-id>               # stop container
+👉 docker rm <container-name-or-id>                 # delete container
+👉 docker rmi <image-name-or-id>                    # delete image
 👉 docker exec -it <container-name> bash/sh         # run command in container
 👉 docker inspect <image-name>                      # Image Details
 👉 docker history <image-name>                      # Show Layer
-
+👉 docker inspect <container-name-or-id>            # Container Details
 ```
 
 
