@@ -81,6 +81,20 @@ composer install \
 
 👉 docker pull nginx                                # image download
 
+# Volume Commands
+
+👉 docker volume ls
+👉 docker volume create html-website
+👉 docker volume inspect html-website
+👉 docker volume rm html-website
+
+# Network Commands
+
+👉 docker network ls
+👉 docker network create app-net
+👉 docker network inspect app-net
+👉 docker network rm app-net
+
 ```
 
 
