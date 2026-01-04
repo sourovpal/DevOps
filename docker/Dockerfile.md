@@ -60,6 +60,17 @@ composer install \
 👉 docker run -d --net app-net --name <container-name>
 👉 docker run -d --name -p 8080:80 <container-name> <image-name>
 👉 docker run -d --name <container-name> -p 8080:80 -v html-website:/var/www/html <image-name>
+
+# Real Production Flow (Laravel Example)
+
+👉 docker build -t laravel-app .
+👉 docker run -d \
+     --name laravel \
+     -p 80:80 \
+     -v laravel-storage:/var/www/html/storage \
+     --restart always \
+     laravel-app
+
 ```
 
 ### 🧩 Step 5: All Commands
@@ -81,7 +92,10 @@ composer install \
 
 # Docker Hub
 
-👉 docker pull nginx                                # image download
+👉 docker login
+👉 docker pull myapp
+👉 docker tag myapp sourov/myapp:v1
+👉 docker push sourov/myapp:v1
 
 # Docker Compose
 
