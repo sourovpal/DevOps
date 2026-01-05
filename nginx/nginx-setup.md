@@ -129,6 +129,19 @@
 ```
 ### 🧩 Sticky Session / Least Connections
 ```bash
+  # Round-robin (default)
+  # Request 1 → 3000
+  # Request 2 → 3001
+  # Request 3 → 3002
+  # Request 4 → 3000 (loop)
+
+  upstream node_app {
+      server 127.0.0.1:3000;
+      server 127.0.0.1:3001;
+      server 127.0.0.1:3002;
+  }
+
+
   # Least connections
   upstream node_app {
       least_conn;
