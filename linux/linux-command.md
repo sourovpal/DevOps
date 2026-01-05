@@ -153,6 +153,14 @@
 
 # Network Testing / Troubleshooting
 
+👉 ping 8.8.8.8                        # Network connectivity test
+👉 ping google.com                     # DNS test
+👉 traceroute google.com               # প্যাকেট কোন রাউট দিয়ে যাচ্ছে তা দেখা যায়
+👉 mtr google.com                      # ping + traceroute একসাথে (real-time)
+👉 curl -I http://example.com          # HTTP header response দেখা যায়
+👉 wget http://example.com             # URL থেকে ডাটা ডাউনলোড করার জন্য
+
+
 ```
 
 
