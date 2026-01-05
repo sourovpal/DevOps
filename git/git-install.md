@@ -72,6 +72,17 @@
     👉 git commit -m "Title" -m "Description"      # Multiple message lines
 ```
 
+### 🧩 Git Uncommit With Unstage
+
+```bash
+    👉 git reset --soft HEAD~1      # Commit Delete করবে, কিন্তু ‍Stage থাকবে
+    👉 git reset HEAD~1             # Commit & Stage Delete but file changes থাকবে
+    👉 git reset --mixed HEAD~1     # Commit & Stage Delete but file changes থাকবে
+    👉 git reset --hard HEAD~1      # ❌ Dangerous! Commit + Changes সব মুছে ফেলবে
+    👉 git reset --soft HEAD~3      # একাধিক commit uncommit করতে
+    👉 git reset --hard HEAD~3      # ❌ Dangerous! একাধিক commit uncommit, Unstage করতে With Code Delete
+```
+
 
 
 
