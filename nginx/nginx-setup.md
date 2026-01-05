@@ -34,8 +34,8 @@
       listen 80;
       server_name mywebsite.local;
   
-      root /var/www/mywebsite;
-      index index.html;
+      root /var/www/mywebsite;    // Source Directory
+      index index.html;           // Default homepage
   
       location / {
           try_files $uri $uri/ =404;
