@@ -45,6 +45,27 @@
     👉 man <command>                   # কমান্ডের ম্যানুয়াল দেখায় <man ls>
 ```
 
+### 🧩 Group
+
+```bash
+    👉 sudo groupadd developers            # নতুন group তৈরি
+    👉 sudo groupadd -g 1001 designers     # নির্দিষ্ট GID দিয়ে group তৈরি
+    # -g → GID (group ID) নির্দিষ্ট করার জন্য
+
+    👉 sudo groupdel developers                # group মুছে ফেলা
+    👉 sudo groupmod -n dev_team developers    # group name rename | -n = নতুন নাম
+
+    # User কে group এ assign করা
+
+    👉 sudo usermod -g <group-name> <username>         # assign group
+    👉 sudo usermod -a -G designers,qa soruov          # -a = append
+
+    👉 groups <username>                               # All assign group list
+
+    👉 cat /etc/group                                  # All Groups
+    👉 cut -d: -f1 /etc/group                          # শুধু নামগুলো দেখতে
+```
+
 
 
 
