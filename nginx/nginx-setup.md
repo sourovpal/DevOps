@@ -84,4 +84,27 @@
   👉 sudo certbot --nginx -d mywebsite.local
 ```
 
+### 🧩 Nginx Load Balancer Configuration
+```bash
+  upstream node_app {
+      server 127.0.0.1:3000;
+      server 127.0.0.1:3001;
+      server 127.0.0.1:3002;
+  }
+  
+  server {
+      listen 80;
+      server_name mynodeapp.local;
+  
+      location / {
+          proxy_pass http://node_app;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'upgrade';
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+      }
+  }
+```
+
 
