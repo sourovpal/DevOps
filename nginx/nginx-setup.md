@@ -28,3 +28,34 @@
   sudo ufw allow 'Nginx Full'
   sudo ufw reload
 ```
+### 🧩 Basic Server configer
+```bash
+  server {
+      listen 80;
+      server_name mywebsite.local;
+  
+      root /var/www/mywebsite;
+      index index.html;
+  
+      location / {
+          try_files $uri $uri/ =404;
+      }
+  }
+
+  # Enable
+
+  sudo ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled/
+  sudo nginx -t         # Configer Test
+  sudo systemctl reload nginx
+```
+📌 $uri	exact file খোঁজে (/about.html)\
+📌 $uri/	directory খোঁজে (/blog/)\
+📌 =404	কিছুই না পেলে 404 error
+
+### 🧩 Add Local Domain
+```bash 
+  sudo nano /etc/hosts
+  127.0.0.1 mywebsite.local     # Add This file
+```
+
+
