@@ -140,7 +140,18 @@
 | o      | others                   | Everyone else                                 |
 | a      | all                      | All of the above (user, group, others)        |
 
+### 🧩 Network
 
+```bash
+👉 ifconfig                             # ইন্টারফেসের IP, MAC, RX/TX stats দেখায়
+👉 ip addr show / ip a                  # IP এবং state দেখা যায়
+👉 ip link show / ip l                  # status দেখা যায় (UP/DOWN, MAC)
+👉 ip route show / ip r                 # রাউটিং টেবিল দেখায়
+👉 nmcli device status                  # রাউটিং টেবিল দেখায়
+
+# Network Testing / Troubleshooting
+
+```
 
 
 
