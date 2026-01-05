@@ -259,9 +259,39 @@ apt, dpkg, rpm, dnf, yum, pacman
     👉 rsync -avz --progress folder user@host:/path
     👉 rsync -avz -e "ssh -p 2222" folder user@host:/path
 ```
-📌 -t  = Key type
-📌 -b = Bit size
+📌 -t  = Key type\
+📌 -b = Bit size\
 📌 -C = Comment
+
+### 🧩 Wget & Download file
+```bash
+    sudo apt update
+    sudo apt install wget -y
+
+    wget -c https://example.com/bigfile.zip
+    0 2 * * * wget -O /home/user/file.zip https://example.com/file.zip     # auto download
+    wget -qO- https://example.com/file.txt | grep "keyword"
+```
+#### 📌 Download Command Options
+
+# Download Command Options with Examples
+
+| Option          | Description                       | Example |
+|-----------------|-----------------------------------|---------|
+| `-O`            | Save as custom filename           | `wget -O myfile.html https://example.com` |
+| `-c`            | Resume download                   | `wget -c https://example.com/largefile.zip` |
+| `-b`            | Background download               | `wget -b https://example.com/file.zip` |
+| `-i file`       | Download URLs from a file         | `wget -i urls.txt` |
+| `-r`            | Recursive download                | `wget -r https://example.com/folder/` |
+| `-np`           | No parent directory               | `wget -r -np https://example.com/folder/` |
+| `-k`            | Convert links for local browsing  | `wget -r -k https://example.com` |
+| `--limit-rate`  | Limit bandwidth                   | `wget --limit-rate=200k https://example.com/file.zip` |
+| `--user-agent`  | Set custom user-agent             | `wget --user-agent="Mozilla/5.0" https://example.com` |
+| `--header`      | Add HTTP headers                  | `wget --header="Authorization: Bearer TOKEN" https://example.com` |
+| `-q`            | Quiet mode                        | `wget -q https://example.com/file.zip` |
+| `-v`            | Verbose mode                      | `wget -v https://example.com/file.zip` |
+
+
 
 
 
