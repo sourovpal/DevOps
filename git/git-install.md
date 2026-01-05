@@ -93,6 +93,101 @@
     👉 git remote show origin      # Verify করার জন্য
 ```
 
+### 🧩 Git All Commands
+```bash
+    👉 git branch <branch-name>            # Create a new branch
+    👉 git branch                          # Show Local Branch List
+    👉 git branch -a                       # local + remote branch List
+
+    📌 Branch delete
+
+    👉 git branch -d <branch-name>             # Local Branch Delete
+    👉 git branch -D <branch-name>             # Local Branch force delete
+    👉 git push origin --delete <branch-name>  # Delete Remote Branch
+
+    📌 Checkout / Switch Branch
+
+    👉 git checkout <branch-name>              # Switch Branch
+    👉 git checkout -b <new-branch>            # Create & Switch Branch
+    👉 git switch <branch-name>                # Switch Branch [NEW]
+    👉 git switch -c <branch-name>             # Create & Switch Branch [NEW]
+
+    📌 Push Commands
+
+    👉 git push -u origin <branch-name>        # প্রথমবার push
+    👉 git push                                # সাধারণ push
+    👉 git push origin main                    # নির্দিষ্ট branch push
+    👉 git push --all                          # সব branch push
+    👉 git push --set-upstream origin <branch-name>
+    # --set-upstream এই branch কে remote tracking branch হিসেবে set করবে
+    # -u = --set-upstream
+
+
+    📌 Pull Commands
+
+    👉 git pull                # pull = fetch + merge
+    👉 git pull origin main    # নিদিষ্ট Branch
+    👉 git pull --rebase       # rebase সহ pull
+
+    📌 Clone Commands
+
+    👉 git clone https://github.com/<username>/<repo>.git                       # repository clone
+    👉 git clone -b branch-name https://github.com/<username>/<repo>.git        # নির্দিষ্ট branch clone
+    👉 git clone --depth 1 https://github.com/<username>/<repo>.git             # Shallow clone
+
+    📌 Fetch Commands
+
+    👉 git fetch                       # সব remote branch fetch
+    👉 git fetch origin                # সব remote branch fetch
+    👉 git fetch origin branch-name    # নির্দিষ্ট branch fetch
+
+    📌 Log Commands
+
+    👉 git log
+    👉 git log --oneline
+    👉 git log --oneline --graph --all
+    👉 git log -n 5
+    👉 git log --author="Soruov Pal"
+    👉 git log --since="2026-01-01" --until="2026-01-05"
+    👉 git log --grep="fix"            # Commit message filter
+    👉 git log -- path/to/file.txt     # Files filter
+    👉 git log --pretty=oneline
+    👉 git log --pretty=format:"%h - %an, %ar : %s"
+    👉 git log -p                      # কোন ফাইলে কত line add/remove হয়েছে
+    👉 git log -p --stat --name-only
+    👉 git diff HEAD~2 HEAD
+    👉 git diff --staged
+
+    👉 git branch -vv
+    # Current branch (যেখানে আপনি এখন আছেন)
+    # Tracking branch (যে remote branch এর সাথে linked)
+    # Last commit hash + message
+
+    📌 নির্দিষ্ট commit অন্য branch-এ apply করা
+
+    👉 git checkout main
+    👉 git cherry-pick <commit-hash>
+
+    📌 Stash (Temporary save changes) / Commit না করেও branch switch করার জন্য
+
+    👉 git stash       # save current changes
+    👉 git stash list  # list stashed changes
+    👉 git stash apply # apply latest stash
+    👉 git stash pop   # apply + remove from stash
+
+    📌 Tagging - Release / version tracking
+
+    👉 git tag v1.0.0
+    👉 git tag -a v1.0.1 -m "Bug fixes"
+    👉 git push origin --tags
+
+   📌 Sparse Checkout
+
+    👉 git sparse-checkout init --cone
+    👉 git sparse-checkout set folder1 folder2
+
+```
+
 
 
 
