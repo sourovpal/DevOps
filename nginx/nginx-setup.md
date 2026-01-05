@@ -28,6 +28,41 @@
   👉 sudo ufw allow 'Nginx Full'
   👉 sudo ufw reload
 ```
+| Variable                     | Meaning / Use           | Example                      |
+| ---------------------------- | ----------------------- | ---------------------------- |
+| `$remote_addr`               | Client IP address       | `allow $remote_addr;`        |
+| `$remote_port`               | Client port             | Logging / access control     |
+| `$request`                   | Full HTTP request line  | `"GET /index.html HTTP/1.1"` |
+| `$request_method`            | HTTP method             | `GET, POST`                  |
+| `$request_uri`               | Full URI with args      | `/api/user?id=5`             |
+| `$uri`                       | URI without args        | `/api/user`                  |
+| `$args`                      | Query string            | `id=5&name=soruov`           |
+| `$document_root`             | Root path of site       | `/var/www/html`              |
+| `$request_filename`          | Full path to file       | `/var/www/html/index.html`   |
+| `$scheme`                    | HTTP scheme             | `http` or `https`            |
+| `$server_name`               | Current server_name     | `mywebsite.local`            |
+| `$server_addr`               | IP of server            | `127.0.0.1`                  |
+| `$server_port`               | Port of server          | `80` or `443`                |
+| `$host`                      | Host header from client | `mywebsite.local`            |
+| `$http_user_agent`           | Client user agent       | `Mozilla/5.0 ...`            |
+| `$http_referer`              | HTTP referer header     | `https://google.com`         |
+| `$http_cookie`               | Client cookies          | `sessionid=abc123`           |
+| `$connection`                | Connection number       | Incremental connection id    |
+| `$connection_requests`       | Requests per connection | HTTP keep-alive              |
+| `$proxy_add_x_forwarded_for` | Forwarded client IP     | For reverse proxy            |
+| `$upstream_cache_status`     | Cache status            | `HIT, MISS, EXPIRED`         |
+| `$hostnames`                 | Server hostname(s)      | Used in logging              |
+| `$bytes_sent`                | Response bytes          | Logging                      |
+| `$content_length`            | Request Content-Length  | POST body length             |
+| `$content_type`              | Response content type   | `text/html`                  |
+| `$gzip_ratio`                | Compression ratio       | Only if gzip enabled         |
+| `$limit_rate`                | Limit rate for response | Throttling                   |
+| `$pid`                       | Nginx worker PID        | Logging / monitoring         |
+| `$request_time`              | Time to process request | Logging performance          |
+| `$status`                    | Response status code    | `200, 404, 500`              |
+| `$connection_upgrade`        | For WebSocket upgrade   | `upgrade` header check       |
+| `$sent_http_content_type`    | Sent content type       | Logging                      |
+
 ### 🧩 Basic Server configer
 ```bash
   server {
