@@ -15,6 +15,12 @@
     👉 git config --global user.email "sourovpal@gmail.com"
 ```
 
+### 🧩 Git Init
+
+```bash
+    👉 git init
+    👉 git status
+```
 
 
 
