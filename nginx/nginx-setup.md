@@ -98,6 +98,11 @@
   app.listen(port, () => {
     console.log(`Server running on port ${port}`);
   });
+
+  # PORT=3000 node index.js & PORT=3001 node index.js & PORT=3002 node index.js
+  # curl http://localhost:3000
+  # curl http://localhost:3001
+  # curl http://localhost:3002
 ```
 
 ### 🧩 Nginx Load Balancer Configuration
