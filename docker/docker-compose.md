@@ -62,9 +62,11 @@ networks:
     networks:
       - webnet
 ```
-# App Args
+### 🧩 ENV Veriable setup
 
-`
+```bash
+  # Docker Compose
+
   services:
     app:
       build:
@@ -73,9 +75,9 @@ networks:
           APP_ENV: development
       ports:
         - "9000:9000"
-`
 
-`
+  # Dockerfile
+
   FROM php:8.2-fpm
   ARG APP_ENV
   ENV APP_ENV=${APP_ENV}
@@ -90,7 +92,7 @@ networks:
       fi
   
   CMD ["php-fpm"]
-`
+```
 
 
 
