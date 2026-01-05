@@ -65,6 +65,38 @@
     👉 cat /etc/group                                  # All Groups
     👉 cut -d: -f1 /etc/group                          # শুধু নামগুলো দেখতে
 ```
+### 🧩 User Manage
+
+```bash
+    👉 sudo useradd soruov                     # Normal user create
+    👉 sudo useradd -m soruov                  # User create with home directory
+    👉 sudo useradd -m -s /bin/bash -g developers soruov   # home directory + shell + group নির্দিষ্ট করে
+    👉 sudo useradd -u 1002 -m soruov          # Specific UID নির্দিষ্ট করে
+
+    👉 sudo userdel soruov                     # শুধু user মুছে দেয়
+    👉 sudo userdel -r soruov                  # user + home directory মুছে দেয়
+
+    👉 sudo usermod -l newname oldname             # username rename
+    👉 sudo usermod -d /home/newname -m newname    # home directory rename করতে
+
+    👉 sudo passwd soruov                          # user password set/change
+    👉 sudo passwd -e soruov                       # password expire করানো
+    👉 sudo passwd -l soruov                       # password disable করা
+    👉 sudo passwd -u soruov                       # password enable করা
+
+    👉 id soruov                                   # User Info
+    👉 getent passwd soruov                        # home directory, shell, etc.
+
+    👉 sudo usermod -L soruov                      # lock user (login blocked)
+    👉 sudo usermod -U soruov                      # unlock user
+
+```
+📌 -d + -m → old home directory move করা হয়।\
+📌 -m → home directory তৈরি করবে\
+📌 -s → login shell নির্দিষ্ট করবে\
+📌 -g → primary group\
+📌 -G → secondary group(s)
+
 
 
 
