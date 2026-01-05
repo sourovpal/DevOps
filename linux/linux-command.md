@@ -98,6 +98,51 @@
 📌 -G → secondary group(s)
 
 
+### 🧩 File & Folder Permission
+
+```bash
+    👉 chmod u+x script.sh             # owner কে execute যোগ করা (<owner>+<execute = x>)
+    👉 chmod g-w file.txt              # group থেকে write permission remove করা (<group>+<write = w>)
+    👉 chmod a+r file.txt              # all users কে read যোগ করা (owner, group, other) (<all> + <read = r>)
+
+
+    👉 chmod 755 script.sh
+    # owner: rwx (4+2+1=7)
+    # group: r-x (4+0+1=5)
+    # others: r-x (4+0+1=5)
+
+    👉 chmod 644 file.txt
+    # owner: rw- (4+2=6)
+    # group: r-- (4)
+    # others: r-- (4)
+
+    👉 chmod -R 755 /project                       # সব ফাইল ও ফোল্ডারের permission পরিবর্তন
+
+    👉 chown soruov file.txt                       # Owner পরিবর্তন
+    👉 chown soruov: file.txt                      # Owner পরিবর্তন
+    👉 chown :developers file.txt                  # Group পরিবর্তন
+    👉 chown soruov:developers file.txt            # Owner + Group পরিবর্তন
+    👉 chown -R soruov:developers /var/www/html    # recursive সব ফোল্ডারের জন্য
+
+    # শুধুমাত্র গ্রুপ পরিবর্তন করতে ব্যবহার হয়।
+
+    👉 chgrp developers file.txt
+    👉 chgrp -R staff /project
+
+```
+#### 🧩 Symbol & Meaning
+
+| Symbol | Meaning                   | Description                                    |
+|--------|---------------------------|------------------------------------------------|
+| u      | user / owner             | The owner of the file                          |
+| g      | group                    | Users belonging to the file's group           |
+| o      | others                   | Everyone else                                 |
+| a      | all                      | All of the above (user, group, others)        |
+
+
+
+
+
 
 
 
