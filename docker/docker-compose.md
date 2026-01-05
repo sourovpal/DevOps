@@ -15,5 +15,13 @@
             # ./index.html লোকাল মেশিনে যে index.html ফাইল আছে তা নির্দেশ করছে।
             # /usr/share/nginx/html/index.html এটি হলো Nginx সার্ভারের ডিফল্ট লোকেশন যেখানে HTML ফাইল রাখা হয়।
             # :ro মানে read-only। কন্টেইনার ফাইলটি পরিবর্তন করতে পারবে না।
+        networks:
+      - webnet
 
+networks:
+  webnet:
+    driver: bridge
+# networks: সার্ভিস কোথায় থাকবে তা নির্ধারণ করে।
+# webnet: একটি কাস্টম ব্রিজ নেটওয়ার্ক তৈরি।
+# driver: bridge → এটি Docker-এর default network driver।
 ```
