@@ -83,6 +83,16 @@
     👉 git reset --hard HEAD~3      # ❌ Dangerous! একাধিক commit uncommit, Unstage করতে With Code Delete
 ```
 
+### 🧩 Github Remote URL Add/Change
+
+```bash
+    👉 git remote add origin https://github.com/<username>/<repo>.git          # Remote add
+    👉 git remote set-url origin https://github.com/<username>/<new-repo>.git  # Remote Change
+    👉 git remote remove origin                                                # Remote Remove
+    👉 git remote -v               # Remote list দেখার জন্য
+    👉 git remote show origin      # Verify করার জন্য
+```
+
 
 
 
