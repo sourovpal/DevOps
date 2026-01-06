@@ -21,6 +21,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube version
 
 minikube start --driver=docker
+minikube ip
 ```
 ### 🧩 Step 3: Docker ENV for Minikube
 
