@@ -4,7 +4,7 @@
 ```bash
   kubectl apply -f <filename.yaml>
   kubectl get svc           # Show all runing service list
-  minikube sercice <service-name>     # Open local server for dev
+  minikube service <service-name>     # Open local server for dev http://127.0.0.1:30008
 ```
 
 
