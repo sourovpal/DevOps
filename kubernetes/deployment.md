@@ -57,6 +57,7 @@ spec:
 
 ```bash
   👉 kubectl delete deployment/html-website-deployment                   # Delete deployment
+  👉 kubectl scale deployment html-website --replicas=0
   👉 kubectl delete pod/html-website-deployment-xxxxxxxxx                # Delete Pod
 ```
 
