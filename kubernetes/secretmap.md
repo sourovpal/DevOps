@@ -14,7 +14,7 @@
     APP_ENV: cHJvZHVjdGlvbg==       # base64 encoded "production"
     DB_PASSWORD: c2VjdXJlUGFzcw==  # base64 encoded "securePass"
 ```
-``Kubernetes-এ type: Opaque Secret অনেকটা generic key-value store এর মতো। সহজভাবে বলতে গেলে এটা সব ধরনের sensitive data (যেমন password, token, API key) রাখার জন্য ব্যবহৃত হয়।``
+Kubernetes-এ type: Opaque Secret অনেকটা generic key-value store এর মতো। সহজভাবে বলতে গেলে এটা সব ধরনের sensitive data (যেমন password, token, API key) রাখার জন্য ব্যবহৃত হয়।
 
 `deployment.yaml`
 
