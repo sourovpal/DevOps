@@ -23,4 +23,13 @@ spec:
         - configMapRef:
             name: html-website-configmap           # Must Match metadata.name (Step: 1)
 ```
+### 🧩 ConfigMap change করলে ENV auto update হয়? ❌ না
+```bash
+  # ENV variables container start এর সময় set হয়
+  # ConfigMap update করলে running Pod এর ENV বদলায় না
 
+  # ✔️ Solution:
+
+  👉 kubectl rollout restart deployment <deployment-name>
+
+```
