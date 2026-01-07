@@ -73,7 +73,7 @@ data:
 👉 kubectl apply -f application-configmap.yaml
 👉 kubectl apply -f database-configmap.yaml
 👉 kubectl apply -f deployment.yaml
-👉 kubectl exec -it html-website-deployment-5985c5d49c-6l9gq -- sh -c 'echo $APP_ENV'
+👉 kubectl exec -it <pod-name> -- sh -c 'echo $APP_ENV'
 ```
 
 
