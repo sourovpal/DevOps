@@ -111,13 +111,26 @@ containers:
 
 ### 🧩 Pod-এ Volume হিসেবে Mount করা
 ```php
-volumes:
-  - name: config-volume
-    configMap:
-      name: app-config
-volumeMounts:
-  - name: config-volume
-    mountPath: /etc/config
+  containers:
+      - name: html-website
+        image: html-website:latest
+        
+        # ConfigMap environment variable হিসেবে inject
+        envFrom:
+          - configMapRef:
+              name: app-config
+
+        # ConfigMap volume mount
+        volumeMounts:
+          - name: config-volume
+            mountPath: /etc/config
+            readOnly: true
+
+    # Volume definition
+    volumes:
+      - name: config-volume
+        configMap:
+          name: app-config
 ```
 
 
