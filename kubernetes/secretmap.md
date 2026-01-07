@@ -3,7 +3,7 @@
 `configmap.yaml`
 
 ### 🧩 Step 1: Basic Configration
-```bash
+```php
   apiVersion: v1
   kind: Secret
   metadata:
