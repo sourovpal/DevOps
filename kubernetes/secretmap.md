@@ -14,3 +14,14 @@
     APP_ENV: cHJvZHVjdGlvbg==       # base64 encoded "production"
     DB_PASSWORD: c2VjdXJlUGFzcw==  # base64 encoded "securePass"
 ```
+`deployment.yaml`
+
+### 🧩 Step 1: Basic Use
+```php
+  containers:
+    - name: html-website
+      image: html-website:latest
+      envFrom:
+        - secretRef:
+            name: app-secret       # Must match metadata.name in secret.yaml
+```
