@@ -14,7 +14,7 @@
     DB_HOST: "mysql-service"
 ```
 ### 🧩 Step 2: Use All Veriable In Pod's or Deployment
-```bash
+```php
 spec:
   containers:
     - name: demo-container
@@ -36,7 +36,7 @@ spec:
 ### 🧩 Multiple ConfigMap Use
 
 `application-configmap.yaml`
-```bash
+```php
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -47,7 +47,7 @@ data:
   LOG_LEVEL: info
 ```
 `database-configmap.yaml`
-```bash
+```php
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -58,7 +58,7 @@ data:
   DB_DATABASE: myapp_db
 ```
 `deployment.yaml`
-```bash
+```php
   containers:
   - name: html-website
     image: html-website:latest
@@ -78,7 +78,7 @@ data:
 
 ### 🧩 Deployment → custom single or multiple variable use
 
-```bash
+```php
 # custom single
 containers:
   - name: app
