@@ -76,6 +76,39 @@ data:
 👉 kubectl exec -it <pod-name> -- sh -c 'echo $APP_ENV'
 ```
 
+### 🧩 Deployment → custom single or multiple variable use
+
+```bash
+# custom single
+containers:
+  - name: app
+    image: myapp:1.0
+    env:
+      - name: APP_ENV
+        valueFrom:
+          configMapKeyRef:
+            name: application-configmap
+            key: APP_ENV
+
+  # custom multiple
+  containers:
+  - name: app
+    image: myapp:1.0
+    env:
+      - name: APP_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: application-configmap
+            key: APP_NAME
+
+      - name: APP_ENV
+        valueFrom:
+          configMapKeyRef:
+            name: application-configmap
+            key: APP_ENV
+
+```
+
 
 
 
