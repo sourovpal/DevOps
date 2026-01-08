@@ -146,11 +146,11 @@ spec:
 
 #### কখন emptyDir ব্যবহার করবেন?
 
-##### ✅ ব্যবহার করবেন যখন:
+##### ✅ যখন ব্যবহার করবেন:
 - Temporary file
 - Cache
 - Container গুলোর মধ্যে data share
-##### ❌ ব্যবহার করবেন না যখন:
+##### ❌ যখন ব্যবহার করবেন না:
 - Database data
 - User uploaded files
 - Important logs
