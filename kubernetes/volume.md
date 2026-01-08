@@ -31,3 +31,30 @@ Pod বলে:
 - আমার 10GB স্টোরেজ লাগবে
 - Pod PVC ব্যবহার করে ডাটা লিখে
 - Pod delete হলেও → ডাটা থাকে
+
+### 🧩 Step 1: Persistent Volume Create (PV)
+`persistent-volume.yaml`
+
+```bash
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-demo
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data
+```
+
+
+
+
+
+
+
+
+
