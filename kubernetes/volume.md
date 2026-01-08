@@ -144,6 +144,16 @@ spec:
 - reader container সেই file পড়ছে
 - দুই container একই emptyDir ব্যবহার করছে
 
+#### কখন emptyDir ব্যবহার করবেন?
+
+##### ✅ ব্যবহার করবেন যখন:
+- Temporary file
+- Cache
+- Container গুলোর মধ্যে data share
+##### ❌ ব্যবহার করবেন না যখন:
+- Database data
+- User uploaded files
+- Important logs
 
 
 
