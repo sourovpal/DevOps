@@ -35,7 +35,7 @@ Pod বলে:
 ### 🧩 Step 1: Persistent Volume Create (PV)
 `persistent-volume.yaml`
 
-```bash
+```yaml
 apiVersion: v1
 kind: PersistentVolume
 metadata:
