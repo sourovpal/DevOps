@@ -287,7 +287,7 @@
     # Generate SSH Key - path = ~/.ssh (Server SSH)
 
     👉 ssh-keygen                        # Generate ssh key
-    👉 ssh-keygen -t rsa -b 4096         # key generage with rsa for remote access
+    👉 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa         # key generage with rsa for remote access
     👉 ssh-keygen -t ed25519
     👉 authorize_keys                    # Copy id_rsa.pub then paste this file
     👉 cat ~/.ssh/id_rsa.pub | ssh user@host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"     # Manual copy
