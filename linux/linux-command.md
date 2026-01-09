@@ -219,7 +219,7 @@
 ### 🧩 Network
 
 ```bash
-👉 hostname                             # Hostname দেখায়
+👉 hostname                             # Hostname দেখায় (login username)
 👉 hostname -I                          # Hostname IP দেখা যায়
 👉 ifconfig                             # ইন্টারফেসের IP, MAC, RX/TX stats দেখায়
 👉 ip addr show / ip a                  # IP এবং state দেখা যায়
