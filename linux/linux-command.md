@@ -236,7 +236,7 @@
 👉 ping -i 2 google.com                # -i (interval) – packet পাঠানোর সময় ব্যবধানে
 👉 ping -s 100 google.com              # -s (size) – packet size (byte)
 
-
+👉 sudo lsof -i :8000
 
 👉 traceroute google.com               # প্যাকেট কোন রাউট দিয়ে যাচ্ছে তা দেখা যায়
 👉 mtr google.com                      # ping + traceroute একসাথে (real-time)
