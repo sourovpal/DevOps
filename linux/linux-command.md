@@ -322,6 +322,13 @@
 📌 -b = Bit size\
 📌 -C = Comment
 
+### 🧩 rsync with ssh file manage
+
+```bash
+👉 sudo apt install rsync
+👉 rsync -avz my-file.txt root@34.40.169.197:~/data/
+```
+
 ### 🧩 Wget & Download file
 ```bash
     sudo apt update
