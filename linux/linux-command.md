@@ -231,6 +231,12 @@
 
 👉 ping 8.8.8.8                        # Network connectivity test
 👉 ping google.com                     # DNS test
+👉 ping -c 4 google.com                # -c (count) – কয়টা packet পাঠাবে
+👉 ping -i 2 google.com                # -i (interval) – packet পাঠানোর সময় ব্যবধানে
+👉 ping -s 100 google.com              # -s (size) – packet size (byte)
+
+
+
 👉 traceroute google.com               # প্যাকেট কোন রাউট দিয়ে যাচ্ছে তা দেখা যায়
 👉 mtr google.com                      # ping + traceroute একসাথে (real-time)
 👉 curl -I http://example.com          # HTTP header response দেখা যায়
