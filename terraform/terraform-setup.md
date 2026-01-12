@@ -11,10 +11,10 @@ Verify install: `sudo terraform -v`
 
 ### Terraform Project File Structure
 `
-my-terraform-project/
-├── main.tf      # main configuration
-├── variables.tf # variables declaration
-├── outputs.tf   # outputs declaration
-└── terraform.tfvars # variable values
+project/\
+├── main.tf      # main configuration\
+├── variables.tf # variables declaration\
+├── outputs.tf   # outputs declaration\
+└── terraform.tfvars # variable values\
 `
 
