@@ -8,6 +8,15 @@
 # SSH_PRIVATE_KEY
 # <repo-url>/settings/secrets/actions    Save all env
 
+# Multiple Branch trigger
+  # - main
+  # - dev
+  # - staging
+
+# All Branch trigger
+  # - "*"
+
+
 name: Deploy via SSH
 
 on:
