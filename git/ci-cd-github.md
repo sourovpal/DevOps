@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3            # GitHub repository-এর code copy হয়ে আসে, যাতে পরের steps ব্যবহার করতে পারে।
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.8.1
