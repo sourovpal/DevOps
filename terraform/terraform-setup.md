@@ -30,10 +30,10 @@ terraform {        # ব্লকটি মূলত Terraform configuration এ
   required_version = ">= 1.5.0"
 }
 
-provider "aws" {
-  region     = "us-east-1"
+provider "aws" {           # এটা বলে Terraform কে তুমি কোন cloud provider ব্যবহার করবে। এখানে AWS। Google Cloud | Azure
+  region     = "us-east-1"    # AWS এর কোন region এ resources তৈরি হবে। (যেমন EC2, S3, RDS ইত্যাদি)
   access_key = "YOUR_AWS_ACCESS_KEY"
-  secret_key = "YOUR_AWS_SECRET_KEY"
+  secret_key = "YOUR_AWS_SECRET_KEY"   # access_key এবং secret_key → AWS account authenticate করার জন্য credentials।
 }
 ```
 
