@@ -40,4 +40,22 @@ jobs:
       - name: Deploy files via rsync
         run: |
           rsync -avz --delete ./ ${{ secrets.SSH_HOST_NAME }}@${{ secrets.SSH_HOST_IP }}:/var/www/html/
+
+# Run SSH Multiple Script
+/*
+- name: Install Node & Build Frontend
+    uses: appleboy/ssh-action@v1.0.3
+    with:
+      host: ${{ secrets.LINUX_HOST }}
+      username: ${{ secrets.LINUX_USER }}
+      key: ${{ secrets.LINUX_SSH_KEY }}
+      script: |
+        cd ${{ secrets.LINUX_DIR_PATH }}
+
+        echo "📦 Installing Node packages..."
+        npm install
+
+        echo "🏗 Building Next.js frontend..."
+        npm run build
+*/
 ```
