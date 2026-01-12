@@ -28,9 +28,9 @@ quotient=$((num2 / num1))
 echo "Sum: $sum, Difference: $difference, Product: $product, Quotient: $quotient"
 ```
 
-## 🧩 Bash Operators
+# 🧩 Bash Operators
 
-#### 🧩 Comparison Operators
+### 🧩 Comparison Operators
 ```bash
 #!/bin/bash
 
