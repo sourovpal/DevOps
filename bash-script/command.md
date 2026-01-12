@@ -80,8 +80,12 @@ add() {
 }
 result=$(add 5 3)
 echo "Sum is $result"
+```
 
-
+### 🧩 Example: Arrays
+```bash
+arr=("A" "B" "C")
+echo ${arr[0]}
 ```
 
 # 🧩 Bash Operators
