@@ -50,4 +50,12 @@ provider "aws" {           # এটা বলে Terraform কে তুমি �
 }
 ```
 
+Terraform Commands
+```bash
+terraform init     # Terraform initialize
+terraform plan     # কী হবে দেখাবে
+terraform apply    # Resource তৈরি করবে
+terraform destroy  # সব মুছে ফেলবে
+```
+
 
