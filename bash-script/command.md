@@ -52,6 +52,27 @@ fi
 | -gt | Greater than |
 | -ge | Greater than or equal to |
 
+### 🧩 String Comparison Operators
+
+```bash
+#!/bin/bash
+
+str1="apple"
+str2="banana"
+
+if [ "$str1" = "$str2" ]; then
+    echo "Strings are equal"
+else
+    echo "Strings are NOT equal"
+fi
+```
+
+| Operator | Meaning |
+|----------|---------|
+| =  | Equal to |
+| != | Not equal to |
+| <  | Less than (ASCII alphabetical order) |
+| >  | Greater than (ASCII alphabetical order) |
 
 
 
