@@ -8,9 +8,6 @@
 # SSH_PRIVATE_KEY
 # <repo-url>/settings/secrets/actions    Save all env
 
-
-
-
 name: Deploy via SSH
 
 on:
