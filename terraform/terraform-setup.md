@@ -17,4 +17,24 @@ project/\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── outputs.tf   # outputs declaration\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── terraform.tfvars # variable values
 
+### Configure Terraform Provider
+` main.tf`
+```bash
+terraform {        # ব্লকটি মূলত Terraform configuration এর global settings define করে।
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"        # Terraform কে বলে কোন provider registry থেকে AWS provider আনতে হবে।
+      version = "~> 5.0"
+    }
+  }
+  required_version = ">= 1.5.0"
+}
+
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "YOUR_AWS_ACCESS_KEY"
+  secret_key = "YOUR_AWS_SECRET_KEY"
+}
+```
+
 
