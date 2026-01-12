@@ -11,7 +11,7 @@ Backup / Disaster Recovery
 
 ### ধরন:
 
-#### Master-Slave Replication
+#### 🧩 Master-Slave Replication
 
 একটিমাত্র master থাকে, যেখানে লেখার অপারেশন (INSERT, UPDATE, DELETE) হয়।
 এক বা একাধিক slave থাকে, যেখানে শুধু পড়া (SELECT) হয়।
@@ -21,14 +21,14 @@ Backup / Disaster Recovery
 সুবিধা: সহজ এবং দ্রুত পড়ার জন্য scalable।
 অসুবিধা: Master fail হলে write operations বন্ধ।
 
-#### Master-Master Replication
+#### 🧩 Master-Master Replication
 
 একাধিক master থাকে, যেখানেই লেখা ও পড়া উভয় সম্ভব।
 উদাহরণ: MySQL, MariaDB multi-master.
 সুবিধা: High Availability, লেখা distributed করা যায়।
 অসুবিধা: Conflict management জটিল।
 
-#### Asynchronous vs Synchronous Replication
+#### 🧩Asynchronous vs Synchronous Replication
 
 Asynchronous: Master লেখা শেষ করার পর instant slave-এ update হয় না। দ্রুত কিন্তু data loss risk বেশি।
 Synchronous: Master লেখার সময় সবার কাছে commit হতে হয়। ধীর কিন্তু zero data loss।
