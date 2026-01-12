@@ -109,6 +109,43 @@ fi
 | \|\| | Logical OR |
 | ! | Logical NOT |
 
+### 🧩 File Test Operators
+
+```bash
+#!/bin/bash
+
+file="test.txt"
+dir="myfolder"
+
+# -e : file exists
+if [ -e "$file" ]; then
+    echo "$file exists"
+fi
+
+# -d : directory exists
+if [ -d "$dir" ]; then
+    echo "$dir is a directory"
+fi
+
+# -f : regular file
+if [ -f "$file" ]; then
+    echo "$file is a regular file"
+fi
+
+# -s : file is not empty
+if [ -s "$file" ]; then
+    echo "$file is not empty"
+else
+    echo "$file is empty"
+fi
+
+```
+| Operator | Meaning |
+|----------|---------|
+| -e | Checks if a file exists |
+| -d | Checks if a directory exists |
+| -f | Checks if a file is a regular file |
+| -s | Checks if a file is not empty |
 
 
 
