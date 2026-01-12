@@ -39,7 +39,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
-            cd /var/www/your-laravel-project
+            cd /var/www/sourov.com
             git checkout main
             git pull origin main
             composer install --no-dev --optimize-autoloader
