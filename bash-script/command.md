@@ -221,7 +221,8 @@ if [ -z "$1" ]; then
   exit 1
 fi
 ```
-`[ -z "$1" ]` → checks if the first argument $1 is empty.
+- -n STRING → True হবে যদি STRING non-empty হয়।
+- -z STRING → True হবে যদি STRING empty হয়।
 
 
 
