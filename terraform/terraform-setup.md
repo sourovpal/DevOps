@@ -23,13 +23,13 @@ terraform -v
 Verify install: `sudo terraform -v`
 
 ### Terraform Project File Structure
-
+```text
 project/\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── main.tf      # main configuration\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── variables.tf # variables declaration\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── outputs.tf   # outputs declaration\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── terraform.tfvars # variable values
-
+├── main.tf      # main configuration\
+├── variables.tf # variables declaration\
+├── outputs.tf   # outputs declaration\
+└── terraform.tfvars # variable values
+```
 ### Configure Terraform Provider
 ` main.tf`
 ```bash
