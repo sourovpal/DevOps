@@ -207,6 +207,20 @@ fi
 | -f | Checks if a file is a regular file |
 | -s | Checks if a file is not empty |
 
+### 🧩 Script Bash Command With Dynamic Parameters
+
+```bash
+#!/bin/bash
+
+# Pass Parameters
+echo $1, $2, $3    # ./script.sh "PHP" "Laravel", "Dotnet"
+
+# Parameters length check
+if [ -z "$1" ]; then
+  echo "Usage: ./script.sh \"Your commit message\""
+  exit 1
+fi
+```
 
 
 
