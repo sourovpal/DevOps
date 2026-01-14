@@ -207,7 +207,7 @@ fi
 | -f | Checks if a file is a regular file |
 | -s | Checks if a file is not empty |
 
-### 🧩 Script Bash Command With Dynamic Parameters
+### 🧩 Bash Script Command With Dynamic Parameters
 
 ```bash
 #!/bin/bash
