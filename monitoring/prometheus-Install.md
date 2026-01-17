@@ -1,11 +1,11 @@
-# Prometheus Install
+# 🌐 Prometheus Install
 
-### Prometheus User Create
+### 🚨 Prometheus User Create
 ```bash
   sudo useradd --no-create-home --shell /bin/false prometheus
 ```
 
-### Directory Create
+### 🚨 Directory Create
 ```bash
   sudo mkdir /etc/prometheus
   sudo mkdir /var/lib/prometheus
@@ -16,7 +16,7 @@
   sudo chown prometheus:prometheus /var/lib/prometheus
 ```
 
-### Prometheus Download
+### 🚨 Prometheus Download
 ```bash
   cd /tmp
   wget https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz
@@ -34,7 +34,7 @@
   sudo chown -R prometheus:prometheus /etc/prometheus
 ```
 
-### Basic Config
+### 🚨 Basic Config
 `prometheus.yml`
 ```yml
   vim /etc/prometheus/prometheus.yml
@@ -48,7 +48,7 @@
         - targets: ["localhost:9090"]
 ```
 
-### Systemd Service
+### 🚨 Systemd Service
 
 ```service
   sudo vim /etc/systemd/system/prometheus.service
@@ -69,7 +69,7 @@
   [Install]
   WantedBy=multi-user.target
 ```
-### Prometheus Start
+### 🚨 Prometheus Start
 ```sh
   sudo systemctl daemon-reload
   sudo systemctl start prometheus
