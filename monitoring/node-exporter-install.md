@@ -46,6 +46,24 @@
   sudo systemctl status node_exporter
 ```
 
+### Prometheus এ Node Exporter Add করতে হবে
+```bash
+  sudo vim /etc/prometheus/prometheus.yml
+
+  scrape_configs:
+    - job_name: "prometheus"
+      static_configs:
+        - targets: ["localhost:9090"]
+  
+    - job_name: "node_exporter"
+      static_configs:
+        - targets: ["localhost:9100"]
+
+  sudo systemctl restart prometheus
+
+  http://SERVER_IP:9100/metrics
+  http://SERVER_IP:9090/targets
+```
 
 
 
