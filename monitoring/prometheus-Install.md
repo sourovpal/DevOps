@@ -1,0 +1,81 @@
+# Prometheus Install
+
+### Prometheus User Create
+```bash
+  sudo useradd --no-create-home --shell /bin/false prometheus
+```
+
+### Directory Create
+```bash
+  sudo mkdir /etc/prometheus
+  sudo mkdir /var/lib/prometheus
+
+  # Add Permission
+
+  sudo chown prometheus:prometheus /etc/prometheus
+  sudo chown prometheus:prometheus /var/lib/prometheus
+```
+
+### Prometheus Download
+```bash
+  cd /tmp
+  wget https://github.com/prometheus/prometheus/releases/download/v2.49.1/prometheus-2.49.1.linux-amd64.tar.gz
+
+  tar xvf prometheus-2.49.1.linux-amd64.tar.gz
+  cd prometheus-2.49.1.linux-amd64
+
+  sudo cp prometheus /usr/local/bin/
+  sudo cp promtool /usr/local/bin/
+
+  sudo cp -r consoles /etc/prometheus
+  sudo cp -r console_libraries /etc/prometheus
+  sudo cp prometheus.yml /etc/prometheus/
+
+  sudo chown -R prometheus:prometheus /etc/prometheus
+```
+
+### prometheus.yml (Basic Config)
+```bash
+  vim /etc/prometheus/prometheus.yml
+
+  global:
+    scrape_interval: 15s
+
+  scrape_configs:
+    - job_name: "prometheus"
+      static_configs:
+        - targets: ["localhost:9090"]
+```
+
+### Systemd Service
+
+```bash
+  vim vim nano /etc/systemd/system/prometheus.service
+
+  [Unit]
+  Description=Prometheus Monitoring
+  Wants=network-online.target
+  After=network-online.target
+  
+  [Service]
+  User=prometheus
+  Group=prometheus
+  Type=simple
+  ExecStart=/usr/local/bin/prometheus \
+    --config.file=/etc/prometheus/prometheus.yml \
+    --storage.tsdb.path=/var/lib/prometheus
+  
+  [Install]
+  WantedBy=multi-user.target
+```
+### Prometheus Start
+```bash
+  sudo systemctl daemon-reload
+  sudo systemctl start prometheus
+  sudo systemctl enable prometheus
+  sudo systemctl status prometheus
+
+  http://SERVER_IP:9090
+  http://localhost:9090
+```
+
