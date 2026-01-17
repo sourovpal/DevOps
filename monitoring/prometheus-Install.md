@@ -50,7 +50,7 @@
 
 ### Systemd Service
 
-```bash
+```service
   vim vim nano /etc/systemd/system/prometheus.service
 
   [Unit]
