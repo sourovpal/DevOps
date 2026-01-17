@@ -70,7 +70,7 @@
   WantedBy=multi-user.target
 ```
 ### Prometheus Start
-```vscode
+```cmd
   sudo systemctl daemon-reload
   sudo systemctl start prometheus
   sudo systemctl enable prometheus
