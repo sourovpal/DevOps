@@ -36,7 +36,7 @@
 
 ### Basic Config
 `prometheus.yml`
-```bash
+```yml
   vim /etc/prometheus/prometheus.yml
 
   global:
