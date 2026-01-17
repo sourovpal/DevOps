@@ -1,6 +1,6 @@
-# Node Exporter Install
+# 🌐 Node Exporter Install
 
-### Download & Install
+### 🚨 Download & Install
 ```bash
   cd /tmp
   wget https://github.com/prometheus/node_exporter/releases/download/v1.8.1/node_exporter-1.8.1.linux-amd64.tar.gz
@@ -9,13 +9,13 @@
   sudo cp node_exporter /usr/local/bin/
 ```
 
-### User Create
+### 🚨 User Create
 ```bash
   sudo useradd --no-create-home --shell /bin/false node_exporter
   sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 ```
 
-### Systemd Service
+### 🚨 Systemd Service
 ```bash
   sudo vim /etc/systemd/system/node_exporter.service
 
@@ -31,13 +31,13 @@
   WantedBy=default.target 
 ```
 
-### User Create
+### 🚨 User Create
 ```bash
   sudo useradd --no-create-home --shell /bin/false node_exporter
   sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 ```
 
-### Start
+### 🚨 Start
 ```bash
   sudo systemctl daemon-reload
   sudo systemctl start node_exporter
@@ -46,7 +46,7 @@
   sudo systemctl status node_exporter
 ```
 
-### Prometheus এ Node Exporter Add করতে হবে
+###🚨 Prometheus এ Node Exporter Add করতে হবে
 ```bash
   sudo vim /etc/prometheus/prometheus.yml
 
