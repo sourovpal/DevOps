@@ -105,5 +105,30 @@ terraform-project/
 └── README.md
 ```
 
+### Terraform Create AWS Instance
 
+`main.tf`
+
+```tf
+# Provider নির্ধারণ
+provider "aws" {
+  region = "us-east-1"  # আপনার প্রয়োজনীয় region
+}
+
+# EC2 instance তৈরি
+resource "aws_instance" "my_instance" {
+  ami           = "ami-0c55b159cbfafe1f0"  # Ubuntu 22.04 AMI (region-specific)
+  instance_type = "t2.micro"
+
+  # Optional: Key pair for SSH access
+  key_name = "my-key"  # আগেই AWS এ key pair তৈরি করে নিতে হবে
+
+  # Optional: Security group
+  vpc_security_group_ids = ["sg-0123456789abcdef0"]  # আপনার security group ID
+
+  tags = {
+    Name = "MyTerraformInstance"
+  }
+}
+```
 
