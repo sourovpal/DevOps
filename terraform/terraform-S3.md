@@ -46,18 +46,21 @@ AWS_URL=https://my-bucket.s3.ap-south-1.amazonaws.com
 ],
 ```
 
-### AWS Access Key & Secret Key পেতে
+### 🧩 AWS Access Key & Secret Key পেতে
 
 - Step 1: AWS Console → IAM
+
 - Step 2: User তৈরি করুন (যদি আগে না থাকে)
   - Users → Add users
   - Username দিন (যেমন: soruov-admin)
   - Access type:
   - ✅ Programmatic access (CLI, API, SDK এর জন্য)
   - ❌ Console access দরকার না হলে unchecked
+
 - Step 3: Permission attach করুন
   - Direct attach policy: AmazonS3FullAccess (development purpose)
   - Production হলে least privilege principle ফলো করুন
+
 - Step 4: User তৈরি করলে Key পাবেন
   - Access key ID → AWS_ACCESS_KEY_ID
   - Secret access key → AWS_SECRET_ACCESS_KEY
