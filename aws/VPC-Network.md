@@ -103,3 +103,30 @@ Route Table:
 IGW = Internet Gateway এটা AWS VPC-এর জন্য একটা virtual router যা VPC-কে Internet-এর সাথে সংযুক্ত করে।
 - Laravel server / EC2 instance থেকে কোন public API call করা
 - সহজে বলতে গেলে আমার কম্পিউটারে internet connect করা যাতে আমি Facebook, Youtube Access করতে পারি
+- Inbound & Outbound allow করে
+
+### NAT = Network Address Translation
+NAT হলো একটা মেথড যা Private Subnet-এর instance কে Internet access দিতে পারে, কিন্তু Internet থেকে সরাসরি access দেওয়া যাবে না।
+
+**সহজভাবে:**
+- Private IP → Public IP হিসেবে translate করে Internet access দেয়।
+- Internet → Private IP এ ঢুকতে পারবে না।
+
+**কেন দরকার?**
+
+- MySQL / Laravel app EC2 instance আছে Private Subnet-এ → IP 10.0.2.5
+- এই instance থেকে API call করতে হবে যেমন: https://api.example.com
+- Private IP-কে Internet route করা সম্ভব নয়
+- IGW থাকলেও Private subnet direct Internet access পায় না
+
+### IGW vs NAT
+| Feature           | IGW           | NAT                           |
+| ----------------- | ------------- | ----------------------------- |
+| Outbound Internet | ✅             | ✅                             |
+| Inbound Internet  | ✅             | ❌                             |
+| Use case          | Public subnet | Private subnet                |
+| Security          | Depends on SG | Auto secure (Inbound blocked) |
+
+
+
+
