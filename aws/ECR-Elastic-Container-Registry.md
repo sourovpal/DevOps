@@ -1,22 +1,22 @@
-# Elastic Container Registry
+# 🧩 Elastic Container Registry
 
-### **AWS CLI configure করুন** (যদি না থাকে):
+### 🧩 **AWS CLI configure করুন** (যদি না থাকে):
 ```bash
 aws configure
 ```
 
-### **ECR রেজিস্ট্রি তৈরি করুন** (যদি না থাকে):
+### 🧩 **ECR রেজিস্ট্রি তৈরি করুন** (যদি না থাকে):
 ```bash
 aws ecr create-repository --repository-name myproject --region us-east-1
 
 # Get url Example: 123456789012.dkr.ecr.us-east-1.amazonaws.com/myproject
 ```
 
-### **Docker login to ECR**:
+### 🧩 **Docker login to ECR**:
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456789012.dkr.ecr.us-east-1.amazonaws.com
 ```
-### **Simple Project**
+### 🧩 **Simple Project**
 `index.html`
 ```html
   <!DOCTYPE html>
@@ -45,7 +45,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### **Docker Image Build, Tag & Run**:
+### 🧩 **Docker Image Build, Tag & Run**:
 ```bash
 docker build -t myproject:latest .
 
