@@ -147,3 +147,16 @@ aws eks create-nodegroup \
 ```bash
 kubectl get nodes
 ```
+### 
+```bash
+ aws eks describe-nodegroup --cluster-name Html-Project-EKS --nodegroup-name HtmlProjectNodeGroup --region ap-southeast-1
+```
+
+### 
+```bash
+aws eks update-nodegroup-config \
+  --cluster-name Html-Project-EKS \
+  --nodegroup-name HtmlProjectNodeGroup \
+  --scaling-config minSize=1,maxSize=5,desiredSize=2 \
+  --region ap-southeast-1
+```
