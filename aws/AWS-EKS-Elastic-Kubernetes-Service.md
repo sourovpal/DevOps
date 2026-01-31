@@ -1,11 +1,11 @@
 # Elastic Kubernetes Service
 
-### Show cluster list
+### 🧩 Show cluster list
 ```bash
 aws eks list-clusters --region ap-south-1
 ```
 
-### Show all cluster list any region
+### 🧩 Show all cluster list any region
 ```bash
 # Format table
 for region in $(aws ec2 describe-regions --query "Regions[].RegionName" --output text); do
@@ -22,7 +22,7 @@ done
 
 ## Create a new cluster
 
-### Create Role
+### 🧩 Create Role
 `eks-trust.json`
 ```json
 {
@@ -45,7 +45,7 @@ aws iam create-role \
 ```
 * Role বানানোর সময় তুমি যেকোনো meaningful নাম দিতে পারবে
 
-### Policy attach
+### 🧩 Policy attach
 ```bash
 aws iam attach-role-policy \
   --role-name EKSClusterRole \
@@ -56,7 +56,7 @@ aws iam attach-role-policy \
 * যদি তুমি নিজে policy বানাও নাম পুরোপুরি তোমার ইচ্ছেমতো
 * AWS Managed Policy হলে যদি তুমি AWS-এর built-in policy attach করো ❌ নাম change করা যাবে না
 
-### EKS Cluster Create
+### 🧩 EKS Cluster Create
 ```bash
 aws eks create-cluster \
   --name my-eks-cluster \
@@ -70,12 +70,12 @@ aws eks create-cluster \
   - <ACCOUNT_ID> → AWS Account ID
   - EKS API internet থেকে access করা যাবে (endpointPublicAccess=true,endpointPrivateAccess=false)
 
-### Describe Cluster
+### 🧩 Describe Cluster
 ```bash
 aws eks describe-cluster --name Html-Project-EKS --region ap-south-1
 ```
 
-### kubeconfig Update
+### 🧩 kubeconfig Update
 ```bash
 aws eks update-kubeconfig \
   --name my-eks-cluster \
@@ -88,7 +88,7 @@ kubectl get nodes
 
 ## Node Group
 
-### Create Role
+### 🧩 Create Role
 `trust-policy.json`
 ```json
 {
@@ -110,7 +110,7 @@ aws iam create-role \
     --assume-role-policy-document file://trust-policy.json
 ```
 
-### Attach Role Policy
+### 🧩 Attach Role Policy
 ```bash
 aws iam attach-role-policy \
     --role-name EKSNodeRole \
@@ -129,7 +129,7 @@ aws iam attach-role-policy \
   - AmazonEKS_CNI_Policy
   - AmazonEC2ContainerRegistryReadOnly
 
-### Create Node Group for EKS cluster
+### 🧩 Create Node Group for EKS cluster
 
 ```bash
 aws eks create-nodegroup \
@@ -142,7 +142,7 @@ aws eks create-nodegroup \
   --region ap-south-1
 ```
 
-### Check Nodes
+### 🧩 Check Nodes
 
 ```bash
 kubectl get nodes
