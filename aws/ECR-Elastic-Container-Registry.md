@@ -76,6 +76,6 @@ docker run -d -p 8080:80 123456789012.dkr.ecr.us-east-1.amazonaws.com/myproject:
 
 # Push in AWS Elastic Container Registry
 
-docker pull 123456789012.dkr.ecr.us-east-1.amazonaws.com/myproject:latest
+docker push 123456789012.dkr.ecr.us-east-1.amazonaws.com/myproject:latest
 
 ```
