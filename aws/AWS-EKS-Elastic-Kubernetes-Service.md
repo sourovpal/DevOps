@@ -57,3 +57,15 @@ aws eks create-cluster \
 ```bash
 aws eks describe-cluster --name Html-Project-EKS --region ap-southeast-1
 ```
+
+### kubeconfig Update
+```bash
+aws eks update-kubeconfig \
+  --name my-eks-cluster \
+  --region ap-south-1
+
+# Get all nodes
+
+kubectl get nodes
+```
+
