@@ -86,22 +86,9 @@ aws eks update-kubeconfig \
 kubectl get nodes
 ```
 
-### Node Group
-```bash
-aws eks create-nodegroup \
-  --cluster-name my-eks-cluster \
-  --nodegroup-name my-node-group \
-  --subnets subnet-aaa subnet-bbb \
-  --instance-types t3.medium \
-  --scaling-config minSize=1,maxSize=3,desiredSize=2 \
-  --node-role arn:aws:iam::<ACCOUNT_ID>:role/EKSNodeRole \
-  --region ap-south-1
-```
-* 📌 Node role এ লাগবে:
-  - AmazonEKSWorkerNodePolicy
-  - AmazonEKS_CNI_Policy
-  - AmazonEC2ContainerRegistryReadOnly
-> Create Role
+## Node Group
+
+### Create Role
 `trust-policy.json`
 ```json
 {
@@ -121,10 +108,9 @@ aws eks create-nodegroup \
 aws iam create-role \
     --role-name EKSNodeRole \
     --assume-role-policy-document file://trust-policy.json
-# Json config
 ```
 
-> Attach Role Policy
+### Attach Role Policy
 ```bash
 aws iam attach-role-policy \
     --role-name EKSNodeRole \
@@ -137,4 +123,27 @@ aws iam attach-role-policy \
 aws iam attach-role-policy \
     --role-name EKSNodeRole \
     --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+```
+* 📌 Node role এ লাগবে:
+  - AmazonEKSWorkerNodePolicy
+  - AmazonEKS_CNI_Policy
+  - AmazonEC2ContainerRegistryReadOnly
+
+### Create Node Group for EKS cluster
+
+```bash
+aws eks create-nodegroup \
+  --cluster-name my-eks-cluster \
+  --nodegroup-name my-node-group \
+  --subnets subnet-aaa subnet-bbb \
+  --instance-types t3.medium \
+  --scaling-config minSize=1,maxSize=3,desiredSize=2 \
+  --node-role arn:aws:iam::<ACCOUNT_ID>:role/EKSNodeRole \
+  --region ap-south-1
+```
+
+### Check Nodes
+
+```bash
+kubectl get nodes
 ```
