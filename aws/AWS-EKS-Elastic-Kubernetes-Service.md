@@ -46,8 +46,8 @@ aws eks create-cluster \
   --region ap-south-1 \
   --kubernetes-version 1.29 \
   --role-arn arn:aws:iam::<ACCOUNT_ID>:role/EKSClusterRole \
-  --resources-vpc-config subnetIds=<subnet-aaa>,<subnet-bbb>
+  --resources-vpc-config subnetIds=subnet-aaa,subnet-bbb
 ```
 * 📌 এখানে:
-  - <subnet-aaa>, <subnet-bbb> → তোমার VPC এর subnet ID
+  - subnet-aaa, subnet-bbb → তোমার VPC এর subnet ID
   - <ACCOUNT_ID> → AWS Account ID
