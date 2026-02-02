@@ -33,7 +33,10 @@ done
       "Principal": {
         "Service": "eks.amazonaws.com"
       },
-      "Action": "sts:AssumeRole"
+      "Action": [
+        "sts:AssumeRole",
+        "sts:TagSession"
+      ]
     }
   ]
 }
