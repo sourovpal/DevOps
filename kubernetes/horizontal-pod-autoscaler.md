@@ -18,6 +18,9 @@
   ab -n 100000 -c 50 http://127.0.0.1:37655/
 
   kubectl get pods -n kube-system | grep metrics
+  kubectl top nodes   # Show Node Cpu Ram Details
+  kubectl top pods    # Show Pod Cpu Ram Details
+
 ```
 📌 --cpu-percent=50% - যখন Over (51% - 100%) হবে তখনি নতুন Pod তৈরি হবে\
 📌 --min=2 -  Min 2 টি Pod Run থাকবে বাকি গুলো traffic এর উপর ভিত্তি করে বাড়বে কমবে\
