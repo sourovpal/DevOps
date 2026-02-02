@@ -54,7 +54,12 @@ aws iam attach-role-policy \
   --role-name EKSClusterRole \
   --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 ```
-
+* Required policy
+  * AmazonEKSNetworkingPolicy
+  * AmazonEKSLoadBalancingPolicy
+  * AmazonEKSComputePolicy
+  * AmazonEKSClusterPolicy
+  * AmazonEKSBlockStoragePolicy
 
 * যদি তুমি নিজে policy বানাও নাম পুরোপুরি তোমার ইচ্ছেমতো
 * AWS Managed Policy হলে যদি তুমি AWS-এর built-in policy attach করো ❌ নাম change করা যাবে না
