@@ -20,12 +20,14 @@ kubectl edit deployment cluster-autoscaler -n kube-system
 # Add Cluster Name
  - command:
     - --cluster-name=<YOUR CLUSTER NAME>
+
+# Rollout Restart Old Pods
+kubectl rollout restart deployment/cluster-autoscaler -n kube-system
 ```
 
 ### Check Status
 ```bash
 kubectl get pods -n kube-system
-
 # IF Any Problem Show Logs
 kubectl logs -n kube-system deployment/cluster-autoscaler
 ```
