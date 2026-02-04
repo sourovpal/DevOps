@@ -17,6 +17,13 @@ aws --version
 ### AWS Cli Configure
 ```bash
 aws configure
+
+# Input your credentials
+
+AWS Access Key ID []: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+AWS Secret Access Key []: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+default region name []: ap-east-1
+Default output format [json]: json
 ```
 
 ### Aws configure list
