@@ -28,7 +28,7 @@ default region name []: ap-east-1
 Default output format []: json
 ```
 
-### 🧩 Aws configure list
+### 🧩 AWS configure list
 ```bash
 aws configure list     # Show Access key, secret key, region, profile
 aws configure list-profiles     # সব saved profiles দেখাবে।
