@@ -1,4 +1,18 @@
 # AWS S3 Bucket
+### Create S3 Bucket
+
+```bash
+aws s3api create-bucket \
+  --bucket <bucket-name> \
+  --region ap-east-1 \
+  --create-bucket-configuration LocationConstraint=ap-east-1
+
+# Output
+{
+    "Location": "http://<bucket-name>.s3.amazonaws.com/",
+    "BucketArn": "arn:aws:s3:::<bucket-name>"
+}
+```
 
 ### 🧩 S3 Bucket **Public Read Enable**
 **S3 → Your Bucket → Permissions**
