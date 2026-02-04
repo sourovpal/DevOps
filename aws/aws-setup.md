@@ -23,7 +23,7 @@ aws configure
 AWS Access Key ID []: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 AWS Secret Access Key []: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 default region name []: ap-east-1
-Default output format [json]: json
+Default output format []: json
 ```
 
 ### Aws configure list
