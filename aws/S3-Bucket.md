@@ -1,5 +1,5 @@
-# AWS S3 Bucket
-### Create S3 Bucket
+# 💽 AWS S3 Bucket
+### 🧩 Create S3 Bucket
 
 ```bash
 aws s3api create-bucket \
@@ -14,7 +14,7 @@ aws s3api create-bucket \
     "BucketArn": "arn:aws:s3:::<bucket-name>"
 }
 ```
-### Public access block disable
+### 🧩 Public access block disable
 ```bash
 aws s3api put-public-access-block \
   --bucket my-public-bucket-12345 \
@@ -30,7 +30,7 @@ aws s3api put-public-access-block \
 | BlockPublicPolicy=false     | পাবলিক bucket policy ব্লক করা হচ্ছে না                   |
 | RestrictPublicBuckets=false | পাবলিক bucket access রেস্ট্রিক্ট করা হয়নি                |
 
-### Public read/download policy add
+### 🧩 Public read/download policy add
 ```bash
 aws s3api put-bucket-policy \
   --bucket <your-bucket> \
@@ -61,7 +61,7 @@ aws s3api put-bucket-policy \
 | 9   | `"Action": "s3:GetObject"`                   | কোন action অনুমোদিত হবে। এখানে `GetObject` মানে bucket থেকে **object read/download** করা যাবে।                                     |
 | 10  | `"Resource": "arn:aws:s3:::<your-bucket>/*"` | কোন resource-এ policy প্রযোজ্য হবে। এখানে `/*` মানে **bucket-এর সব object**। `<your-bucket>` এর জায়গায় আপনার bucket নাম বসাতে হবে। |
 
-✅ Test upload
+### ✅ Test upload
 ```bash
 aws s3 cp test.jpg s3://<bucket-name>/
 https://<bucket-name>.s3.ap-south-1.amazonaws.com/test.jpg
