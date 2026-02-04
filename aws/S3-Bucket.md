@@ -65,6 +65,9 @@ aws s3api put-bucket-policy \
 ```bash
 aws s3 cp test.jpg s3://<bucket-name>/
 https://<bucket-name>.s3.ap-south-1.amazonaws.com/test.jpg
+
+# All Files and Folders Upload
+aws s3 cp ./ s3://<bucket-name>/ --recursive
 ```
 
 ### 🧩 S3 Bucket **Public Read Enable**
