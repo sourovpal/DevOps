@@ -29,6 +29,7 @@ aws s3api put-public-access-block \
 | IgnorePublicAcls      | false | public ACL ignore করা হবে না। অর্থাৎ public ACL active থাকবে।                                         |
 | BlockPublicPolicy     | false | bucket policy-এ public access block করা হবে না। public policy allow করা হবে।                          |
 | RestrictPublicBuckets | false | শুধু public bucket-এর জন্য access restrict করা হবে না।                                                |
+
 তুমি যদি policy বা ACL দিয়ে public দেন → access allowed হবে। ✅
 
 ### 🧩 Public read/download policy add
