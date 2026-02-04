@@ -2,7 +2,7 @@
 
 ### 🧩 Create IAM User
 ```bash
-Login AWS  ➡️ IAM ➡️ Users ➡️ Create User ➡️ Input User Details ➡️ Save Change
+Login AWS Console Account ➡️ IAM ➡️ Users ➡️ Create User ➡️ Input User Details ➡️ Save Change
 ```
 
 ### 🧩 Aws Cli Download
