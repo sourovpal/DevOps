@@ -14,6 +14,22 @@ aws s3api create-bucket \
     "BucketArn": "arn:aws:s3:::<bucket-name>"
 }
 ```
+### Public access block disable
+```bash
+aws s3api put-public-access-block \
+  --bucket my-public-bucket-12345 \
+  --public-access-block-configuration \
+  "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+```
+**ডিফল্টভাবে AWS public access block করে রাখে।**
+
+| Setting                     | Meaning (এক লাইনে ব্যাখ্যা)                              |
+| --------------------------- | -------------------------------------------------------- |
+| BlockPublicAcls=false       | পাবলিক ACL ব্লক করা হচ্ছে না → পাবলিক পারমিশন দেওয়া যাবে |
+| IgnorePublicAcls=false      | পাবলিক ACL ইগনোর করা হচ্ছে না → ACL কাজ করবে             |
+| BlockPublicPolicy=false     | পাবলিক bucket policy ব্লক করা হচ্ছে না                   |
+| RestrictPublicBuckets=false | পাবলিক bucket access রেস্ট্রিক্ট করা হয়নি                |
+
 
 ### 🧩 S3 Bucket **Public Read Enable**
 **S3 → Your Bucket → Permissions**
