@@ -68,6 +68,9 @@ https://<bucket-name>.s3.ap-south-1.amazonaws.com/test.jpg
 
 # All Files and Folders Upload
 aws s3 cp ./ s3://<bucket-name>/ --recursive
+
+# Show all files and folders
+aws s3 ls s3://electrifying-australia/
 ```
 
 ### 🧩 S3 Bucket **Public Read Enable**
