@@ -1,6 +1,6 @@
 # 💻 AWS Setup CLI Local Computer
 
-### 🧩 Create IAM User
+### 👤 Create IAM User
 ```bash
 Login AWS Console Account ➡️ IAM ➡️ Users ➡️ Create User ➡️ Input User Details ➡️ Save Change
 ```
