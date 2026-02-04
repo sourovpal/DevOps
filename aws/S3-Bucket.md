@@ -61,6 +61,11 @@ aws s3api put-bucket-policy \
 | 9   | `"Action": "s3:GetObject"`                   | কোন action অনুমোদিত হবে। এখানে `GetObject` মানে bucket থেকে **object read/download** করা যাবে।                                     |
 | 10  | `"Resource": "arn:aws:s3:::<your-bucket>/*"` | কোন resource-এ policy প্রযোজ্য হবে। এখানে `/*` মানে **bucket-এর সব object**। `<your-bucket>` এর জায়গায় আপনার bucket নাম বসাতে হবে। |
 
+✅ Test upload
+```bash
+aws s3 cp test.jpg s3://<bucket-name>/
+https://<bucket-name>.s3.ap-south-1.amazonaws.com/test.jpg
+```
 
 ### 🧩 S3 Bucket **Public Read Enable**
 **S3 → Your Bucket → Permissions**
