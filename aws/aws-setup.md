@@ -1,11 +1,11 @@
-# AWS Setup CLI Local Computer
+# 💻 AWS Setup CLI Local Computer
 
-### Create IAM User
+### 🧩 Create IAM User
 ```bash
 Login AWS  ➡️ IAM ➡️ Users ➡️ Create User ➡️ Input User Details ➡️ Save Change
 ```
 
-### Aws Cli Download
+### 🧩 Aws Cli Download
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
@@ -16,7 +16,7 @@ sudo ./aws/install
 aws --version
 ```
 
-### AWS Cli Configure
+### 🧩 AWS Cli Configure
 ```bash
 aws configure
 
@@ -28,13 +28,13 @@ default region name []: ap-east-1
 Default output format []: json
 ```
 
-### Aws configure list
+### 🧩 Aws configure list
 ```bash
 aws configure list     # Show Access key, secret key, region, profile
 aws configure list-profiles     #  সব saved profiles দেখাবে।
 ```
 
-### Show configure details
+### 🧩 Show configure details
 ```bash
 cat ~/.aws/config
 cat ~/.aws/credentials
