@@ -5,7 +5,7 @@
 Login AWS Console Account ➡️ IAM ➡️ Users ➡️ Create User ➡️ Input User Details ➡️ Save Change
 ```
 
-### 🧩 Aws Cli Download
+### 🧩 AWS Cli Download
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 
