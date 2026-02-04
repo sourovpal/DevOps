@@ -8,6 +8,7 @@ aws s3api create-bucket \
   --create-bucket-configuration LocationConstraint=ap-east-1
 
 # Output
+
 {
     "Location": "http://<bucket-name>.s3.amazonaws.com/",
     "BucketArn": "arn:aws:s3:::<bucket-name>"
