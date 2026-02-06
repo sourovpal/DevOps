@@ -32,4 +32,13 @@ kubectl get pods -n kube-system
 kubectl logs -n kube-system deployment/cluster-autoscaler
 ```
 
+### Auto Scaling Group এ ৩টা গুরুত্বপূর্ণ সংখ্যা থাকে
+
+| Term                 | Meaning                                 |
+| -------------------- | ------------------------------------ |
+| **Minimum capacity** | কমপক্ষে যতগুলো instance থাকতেই হবে   |
+| **Desired capacity** | এই মুহূর্তে চালু রাখতে চাও           |
+| **Maximum capacity** | সর্বোচ্চ যতগুলো instance বাড়তে পারবে |
+
+
 
