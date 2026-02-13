@@ -36,3 +36,8 @@ aws iam create-access-key --user-name soruov
     }
 }
 ```
+
+### ইউজারকে গ্রুপ বা পলিসি যোগ করা
+```bash
+aws iam attach-user-policy --user-name USERNAME --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
+```
