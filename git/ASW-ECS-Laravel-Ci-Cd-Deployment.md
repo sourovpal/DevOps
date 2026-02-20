@@ -1,3 +1,10 @@
+# ASW ECS Laravel Project CI/CD Deployment
+
+### CI/CD
+
+`deployment.yml`
+
+```yml
 name: Project Backend Deployment CI/CD.
 
 
@@ -115,3 +122,5 @@ jobs:
             --desired-count 2 \
             --deployment-configuration "maximumPercent=200,minimumHealthyPercent=100" \
             --force-new-deployment
+
+```
