@@ -1,5 +1,14 @@
 # ☸️ Elastic Kubernetes Service
 
+### eksctl install
+```bash
+curl --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" -o eksctl.tar.gz
+tar -xzf eksctl.tar.gz
+sudo mv eksctl /usr/local/bin
+
+eksctl version
+```
+
 ### 🧩 Show cluster list
 ```bash
 aws eks list-clusters --region ap-south-1
