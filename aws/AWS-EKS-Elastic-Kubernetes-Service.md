@@ -102,6 +102,35 @@ aws eks update-kubeconfig \
 
 kubectl get nodes
 ```
+### ✅ Subnet Tags Required for EKS
+
+1. **For EKS Cluster to discover subnet** (required):
+
+```text
+kubernetes.io/cluster/<cluster-name> = shared
+```
+
+* Value `shared` হলে EKS ব্যবহার করতে পারে
+* Value `owned` হলে EKS ownership নেবে
+* Example:
+
+```text
+kubernetes.io/cluster/my-cluster = shared
+```
+
+2. **For public/private distinction** (optional, but recommended):
+
+* Public subnet:
+
+```text
+kubernetes.io/role/elb = 1
+```
+
+* Private subnet:
+
+```text
+kubernetes.io/role/internal-elb = 1
+```
 
 ## 🗄️ Nodes Group
 
