@@ -102,7 +102,7 @@ aws eks update-kubeconfig \
 
 kubectl get nodes
 ```
-### ✅ Subnet Tags Required for EKS
+## ✅ Subnet Tags Required for EKS
 
 1. **For EKS Cluster to discover subnet** (required):
 
