@@ -15,8 +15,6 @@
 
 # 🔐 2️⃣ AWS Security (Very Important for Freelancing)
 
-### শিখতেই হবে:
-
 * KMS (Key Management Service)
 * Secrets Manager
 * Parameter Store
