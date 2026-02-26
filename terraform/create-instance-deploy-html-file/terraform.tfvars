@@ -1,0 +1,10 @@
+aws_region        = "ap-southeast-1"
+ami_id            = "ami-08d59269edddde222"
+instance_type     = "t2.micro"
+key_name          = "aws_tf"
+public_key_path   = "~/.ssh/aws_tf.pub"
+private_key_path  = "~/.ssh/aws_tf"
+website_path      = "./my-website/"
+ssh_user          = "ubuntu"
+
+security_group_name = "default"
