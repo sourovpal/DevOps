@@ -285,7 +285,7 @@
 👉 sudo nano /etc/ssh/sshd_config
 
 # Generate SSH Key - path = ~/.ssh (Server SSH)
-
+👉 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_tf -N ""
 👉 ssh-keygen                        # Generate ssh key
 👉 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa         # key generage with rsa for remote access
 👉 ssh-keygen -t ed25519
