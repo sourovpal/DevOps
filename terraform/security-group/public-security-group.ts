@@ -37,3 +37,8 @@ output "public_sg_id" {
   description = "The ID of the Security Group"
   value       = aws_security_group.public_sg.id
 }
+
+
+output "all_sg_ids" {
+  value = [for sg in aws_security_group.public_sg : sg.id]
+}
