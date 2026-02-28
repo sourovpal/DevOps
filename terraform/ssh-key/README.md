@@ -1,4 +1,4 @@
-# Terraform SSH Key Pair
+# 🎯 Terraform SSH Key Pair
 
 ### ✅ Generate SSH Key
 ```bash
