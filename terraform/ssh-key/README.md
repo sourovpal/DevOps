@@ -20,3 +20,10 @@ resource "aws_key_pair" "my_key" {
   }
 }
 ```
+
+### ✅ Run
+```bash
+terraform init
+terraform apply
+terraform apply -auto-approve
+```
