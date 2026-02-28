@@ -23,7 +23,7 @@ resource "aws_key_pair" "my_key" {
 ```
 
 ### ✅ Terraform দিয়ে সরাসরি Key Generate করা (Advanced)
-```bash
+```tf
 resource "tls_private_key" "example" {
   algorithm = "RSA"
   rsa_bits  = 4096
