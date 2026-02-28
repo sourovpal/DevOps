@@ -6,6 +6,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/my-key -N ""
 ```
 
 ### ✅ Terraform Code:
+`main.tf`
 ```tf
 provider "aws" {
   region = "ap-southeast-1"
