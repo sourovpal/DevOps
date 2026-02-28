@@ -10,7 +10,7 @@ provider "aws" {
 data "aws_vpc" "existing" {
   filter {
     name   = "tag:Name"
-    values = ["ElectrifyingAustralia-vpc"]
+    values = ["MyProject-vpc"]
   }
 }
 
