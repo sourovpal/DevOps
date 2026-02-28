@@ -25,7 +25,7 @@ Verify install: `sudo terraform -v`
 
 ### Terraform Project File Structure
 ```text
-project/\
+project/
 ├── main.tf      # main configuration
 ├── variables.tf # variables declaration
 ├── outputs.tf   # outputs declaration
