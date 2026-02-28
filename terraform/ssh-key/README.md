@@ -39,6 +39,7 @@ output "private_key" {
   sensitive = true
 }
 ```
+⚠️ Note: এভাবে করলে private key Terraform state-এ থেকে যায় — production এ recommended না।
 
 ### ✅ Run
 ```bash
