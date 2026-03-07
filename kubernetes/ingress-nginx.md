@@ -1,6 +1,6 @@
-# Ingress Controller ব্যবহার করা | Multiple Service access
+# 💡 Ingress Controller ব্যবহার করা | Multiple Service access
 
-### Frontend Service
+### ✅ Frontend Service
 ```yaml
 apiVersion: v1
 kind: Service
@@ -16,7 +16,7 @@ spec:
   type: ClusterIP
 ```
 
-### Backend Service
+### ✅ Backend Service
 ```yaml
 apiVersion: v1
 kind: Service
@@ -32,7 +32,7 @@ spec:
   type: ClusterIP
 ```
 
-### LoadBalancer
+### ✅ LoadBalancer
 ```yaml
 apiVersion: v1
 kind: Service
@@ -50,7 +50,7 @@ spec:
       targetPort: 443
 ```
 
-### Ingress
+### ✅ Ingress
 
 ```yaml
 apiVersion: networking.k8s.io/v1
