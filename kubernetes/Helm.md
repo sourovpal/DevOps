@@ -1,6 +1,6 @@
 # Helm Install and Use
 
-### Install
+### 🧩 Install
 ```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm version
 ```
 
-### Helm Chart structure
+### 🧩 Helm Chart structure
 
 ```
 myapp-helm/
@@ -26,7 +26,7 @@ myapp-helm/
 * **values.yaml** – Frontend & Backend কনফিগারেশন
 * **templates/** – Deployment + Service YAML টেমপ্লেট
 
-### Chart.yaml
+### 🧩 Chart.yaml
 
 ```yaml
 apiVersion: v2
@@ -35,7 +35,7 @@ description: My Fullstack App
 version: 1.0.0
 ```
 
-### values.yaml
+### 🧩 values.yaml
 
 ```yaml
 frontend:
@@ -51,7 +51,7 @@ backend:
   port: 8080
 ```
 
-### frontend-deployment.yaml
+### 🧩 frontend-deployment.yaml
 
 ```yaml
 apiVersion: apps/v1
@@ -75,7 +75,7 @@ spec:
             - containerPort: {{ .Values.frontend.port }}
 ```
 
-### frontend-service.yaml
+### 🧩 frontend-service.yaml
 
 ```yaml
 apiVersion: v1
@@ -90,7 +90,7 @@ spec:
     - port: {{ .Values.frontend.port }}
       targetPort: {{ .Values.frontend.port }}
 ```
-### backend-deployment.yaml
+### 🧩 backend-deployment.yaml
 
 ```yaml
 apiVersion: apps/v1
@@ -113,7 +113,7 @@ spec:
           ports:
             - containerPort: {{ .Values.backend.port }}
 ```
-### backend-service.yaml
+### 🧩 backend-service.yaml
 
 ```yaml
 apiVersion: v1
@@ -128,7 +128,7 @@ spec:
     - port: {{ .Values.backend.port }}
       targetPort: {{ .Values.backend.port }}
 ```
-### Helm install workflow
+### 🧩 Helm install workflow
 
 ```bash
 helm install myapp ./myapp-helm
