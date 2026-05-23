@@ -121,6 +121,14 @@ composer install \
 👉 docker network inspect app-net
 👉 docker network rm app-net
 
+| Network Driver  | use case |
+| ------- | ----------------------- |
+| bridge  | same machine containers |
+| host    | direct host network     |
+| none    | no network              |
+| overlay | multi server cluster    |
+| macvlan | real LAN IP             |
+
 # Cleanup Commands (Very Important)
 
 👉 docker system df              # disk usage
