@@ -137,7 +137,7 @@ composer install \
 
 ```
 
-### Network Types
+### 🧩 Network Types
 
 | Network Driver  | use case |
 | ------- | ----------------------- |
@@ -147,7 +147,7 @@ composer install \
 | overlay | multi server cluster    |
 | macvlan | real LAN IP             |
 
-### Volume Types
+### 🧩 Volume Types
 
 | Driver        | Description           |
 | ------------- | --------------------- |
