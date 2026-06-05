@@ -21,8 +21,6 @@
    * Container logs
    * Exec into container
 
----
-
 ## 🔹 Build & Configuration
 
 4. **Dockerfile**
@@ -38,8 +36,6 @@
    * `.dockerignore`
    * Why and how to use
 
----
-
 ## 🔹 Networking
 
 6. **Docker Network**
@@ -50,8 +46,6 @@
    * Custom bridge network
    * Container-to-container communication
    * Port mapping (`-p 80:80`)
-
----
 
 ## 🔹 Data Persistence
 
@@ -66,8 +60,6 @@
    * Host ↔ Container file sync
    * Dev vs Prod use case
 
----
-
 ## 🔹 Orchestration & Multi-Container
 
 9. **Docker Compose** ⭐⭐
@@ -78,8 +70,6 @@
    * Depends_on
    * Scaling services
 
----
-
 ## 🔹 Registry & Image Sharing
 
 10. **Docker Registry**
@@ -88,8 +78,6 @@
 * Private Registry
 * Push / Pull image
 * Image version strategy
-
----
 
 ## 🔹 Security & Optimization
 
@@ -105,8 +93,6 @@
 * Memory limit
 * Container monitoring
 
----
-
 ## 🔹 Logs & Debugging
 
 13. **Docker Logs & Monitoring**
@@ -114,8 +100,6 @@
 * `docker logs`
 * Inspect container
 * Healthcheck
-
----
 
 ## 🔹 Advanced / Production Topics
 
@@ -135,8 +119,6 @@
 * Docker with AWS ECS
 * Docker with EKS
 * Docker with Nginx reverse proxy
-
----
 
 ## 🔹 Bonus (Industry Use)
 
