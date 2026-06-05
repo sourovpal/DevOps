@@ -147,7 +147,14 @@ composer install \
 | overlay | multi server cluster    |
 | macvlan | real LAN IP             |
 
+### Volume Types
 
+| Driver        | Description           |
+| ------------- | --------------------- |
+| local         | Local disk            |
+| NFS           | Network storage       |
+| CIFS/SMB      | Windows network share |
+| Cloud drivers | AWS/GCP/Azure storage |
 
 
 
