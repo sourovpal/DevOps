@@ -88,7 +88,7 @@ composer install \
 👉 docker rmi <image-name-or-id>                    # delete image
 👉 docker exec -it <container-name> bash/sh         # run command in container
 👉 docker inspect <image-name>                      # Image Details
-👉 docker history <image-name>                      # Show Layer
+👉 docker history <image-name>                      # Show Layer (Dockerfile)
 👉 docker inspect <container-name-or-id>            # Container Details
 👉 docker logs <container-name-or-id>               # Container Logs
 👉 docker logs -f <container-name-or-id>            # Container Live Logs
