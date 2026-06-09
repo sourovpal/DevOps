@@ -151,6 +151,14 @@ composer install \
 
 ### 🧩 Volume Types
 
+| Type             | Stored Location         | Managed By | Production           |
+| ---------------- | ----------------------- | ---------- | -------------------- |
+| Named Volume     | Docker Volume Directory | Docker     | ✅ Best               |
+| Bind Mount       | Host Path               | User       | ⚠️ Mainly Dev        |
+| Anonymous Volume | Docker Volume Directory | Docker     | ⚠️ Rare              |
+| tmpfs Mount      | RAM                     | OS         | ✅ Specific Use Cases |
+
+
 | Driver        | Description           |
 | ------------- | --------------------- |
 | local         | Local disk            |
