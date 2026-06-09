@@ -139,13 +139,15 @@ composer install \
 
 ### 🧩 Network Types
 
-| Network Driver  | use case |
-| ------- | ----------------------- |
-| bridge  | same machine containers |
-| host    | direct host network     |
-| none    | no network              |
-| overlay | multi server cluster    |
-| macvlan | real LAN IP             |
+| Network Type | Scope            | IP Source | Common Use           |
+| ------------ | ---------------- | --------- | -------------------- |
+| Bridge       | Single Host      | Docker    | Web Apps, APIs       |
+| Host         | Single Host      | Host OS   | High Performance     |
+| None         | Single Host      | None      | Isolated Container   |
+| Overlay      | Multiple Hosts   | Docker    | Swarm, Microservices |
+| Macvlan      | Physical Network | LAN       | Legacy Apps          |
+| IPvlan       | Physical Network | LAN       | Large Scale Networks |
+
 
 ### 🧩 Volume Types
 
