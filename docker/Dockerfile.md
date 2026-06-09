@@ -159,13 +159,6 @@ composer install \
 | tmpfs Mount      | RAM                     | OS         | ✅ Specific Use Cases |
 
 
-| Driver        | Description           |
-| ------------- | --------------------- |
-| local         | Local disk            |
-| NFS           | Network storage       |
-| CIFS/SMB      | Windows network share |
-| Cloud drivers | AWS/GCP/Azure storage |
-
 
 
 
