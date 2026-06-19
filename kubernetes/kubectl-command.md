@@ -67,3 +67,80 @@
 
 * kubectl delete pod --all
 * kubectl delete deployment --all
+
+
+
+## 🐳 Minikube Commands Cheat Sheet
+
+### 🚀 Cluster Control
+
+* minikube start
+* minikube start -p <profile>
+* minikube stop
+* minikube delete
+* minikube delete -p <profile>
+* minikube status
+* minikube pause
+* minikube unpause
+* minikube restart
+
+### ⚙️ Cluster Info
+
+* minikube version
+* minikube ip
+* minikube logs
+* minikube update-check
+* minikube config view
+
+### 📦 Kubernetes Access
+
+* minikube kubectl -- get pods
+* minikube kubectl -- get nodes
+* minikube kubectl -- get all
+
+### 🐳 Docker Environment
+
+* minikube docker-env
+* eval $(minikube docker-env)
+* eval $(minikube docker-env -p <profile>)
+* eval $(minikube docker-env -u)
+
+### 🌐 Service Access
+
+* minikube service <service-name>
+* minikube service <service-name> --url
+
+### 🔌 Addons
+
+* minikube addons list
+* minikube addons enable <addon-name>
+* minikube addons disable <addon-name>
+
+### 💻 SSH / Node Access
+
+* minikube ssh
+
+### 📊 Dashboard
+
+* minikube dashboard
+
+### 📸 Images
+
+* minikube image load <image-name>
+* minikube image ls
+
+### 🧪 Troubleshooting
+
+* minikube logs
+* minikube status
+* minikube profile list
+
+### ⚡ Useful Shortcuts
+
+* minikube start
+* minikube stop
+* minikube delete
+* minikube dashboard
+* minikube service <name>
+
+
