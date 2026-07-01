@@ -1,6 +1,6 @@
-# Mysql Database backup
+# 💡Mysql Database backup
 
-### Cron Job
+### ✅ Cron Job
 
 `job-mysql-backup-s3.yaml`
 
@@ -87,7 +87,7 @@ spec:
 
 ```
 
-### Mysql Secret
+### ✅ Mysql Secret
 
 `mysql-secret.yaml`
 
@@ -105,7 +105,7 @@ stringData:
   MYSQL_PASSWORD: 12345678
 ```
 
-### S3 Secret
+### ✅ S3 Secret
 
 `s3-secret.yaml`
 
