@@ -114,7 +114,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: s3-credentials
-  namespace: electrifying
+  namespace: web-app
 type: Opaque
 stringData:
   AWS_ACCESS_KEY_ID: YOUR_AWS_ACCESS_KEY_ID
