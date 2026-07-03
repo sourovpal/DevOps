@@ -131,8 +131,8 @@ spec:
 
           containers:
             - name: mysql-backup
-              image: sourovpal/mysql-backup:latest
-              imagePullPolicy: IfNotPresent
+              image: docker.io/sourovpal/mysql-db-backup:latest
+              imagePullPolicy: Never
 
               resources:
                 requests:
@@ -143,26 +143,35 @@ spec:
                   memory: 512Mi
 
               env:
-                - name: TZ
-                  value: UTC
+                - name: MYSQL_SSL
+                  value: DISABLED
 
-                - name: MYSQL_HOST
+                - name: DB_HOST
                   value: db
 
-                - name: MYSQL_PORT
+                - name: DB_PORT
                   value: "3306"
 
-                - name: MYSQL_DATABASE
-                  value: database_name__
+                - name: DB_NAME
+                  value: db_name # Database name
 
-                - name: MYSQL_USER
+                - name: DB_USER
                   value: root
 
-                - name: MYSQL_PASSWORD
+                - name: DB_PASS
                   valueFrom:
                     secretKeyRef:
                       name: mysql-secret
                       key: MYSQL_ROOT_PASSWORD
+
+                - name: BACKUP_DIR
+                  value: /
+
+                - name: S3_BUCKET
+                  value: electrifying-australia
+
+                - name: S3_PATH
+                  value: database-backups
 
                 - name: AWS_ACCESS_KEY_ID
                   valueFrom:
@@ -178,15 +187,6 @@ spec:
 
                 - name: AWS_DEFAULT_REGION
                   value: ap-southeast-1
-
-                - name: S3_BUCKET
-                  value: s3-database-name
-
-                - name: S3_PREFIX
-                  value: database-backups # folder name
-
-                - name: KEEP_LAST
-                  value: "30"
 
 ```
 
