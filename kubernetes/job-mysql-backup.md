@@ -131,7 +131,7 @@ spec:
 
           containers:
             - name: mysql-backup
-              image: databack/mysql-backup:latest
+              image: sourovpal/mysql-backup:latest
               imagePullPolicy: IfNotPresent
 
               resources:
