@@ -1,4 +1,16 @@
 
+### if functions
+
+| Function       | কাজ                          |
+| -------------- | ---------------------------- |
+| `success()`    | আগের steps সফল               |
+| `failure()`    | কোনো step fail               |
+| `always()`     | সবসময় run                    |
+| `cancelled()`  | workflow cancel হয়েছে        |
+| `contains()`   | কোনো value-এর মধ্যে text আছে |
+| `startsWith()` | text দিয়ে শুরু কিনা          |
+| `endsWith()`   | text দিয়ে শেষ কিনা           |
+
 
 ### Simple html page ci/cd configer
 `.github/workflows`
